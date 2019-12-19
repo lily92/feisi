@@ -16,6 +16,21 @@ $(function () {
     );
 
     //移动端导航
+    $('.p-nav-icon').click(function (e) { 
+      e.preventDefault();
+      var _this = $(this);
+      var menu = _this.parent().find('.psub-menu');
+      $('.psub-menu').slideUp();
+      $('.p-nav-icon').text('+')
+      if(menu.is(':hidden')){
+        menu.stop().slideDown();  
+        _this.text('-')
+      }else{
+        menu.stop().slideUp();  
+        _this.text('+')
+      }
+
+    });
   });
 
 

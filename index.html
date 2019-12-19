@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>数码相机</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="swiper-container banner positionr">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide ">
+        <!-- PC端banner  -->
+        <img src="images/index/index-banner.jpg" alt="" srcset="" class="hidden-xs w100">
+        <!-- 移动端banner -->
+        <img src="images/index/index-banner.jpg" alt="" srcset="" class="visible-xs w100">
+        <div class="positionb  flex ">
+          <div class="max1200 flex flex-al-center ">
+            <div class="">
+              <h2 class="color0">XT 相机系统</h2>
+              <p class="fon32 color3 banner-txt">超凡画质，不留遗憾</p>
+              <p><a href="" class="button-l more">了解更多</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="swiper-pagination-banner swiper-pagination"></div>
+    <script>
+      $(function () {
+        var swiper = new Swiper('.banner', {
+          autoplay: true,
+          loop: true,
+          effect: 'fade',
+          pagination: {
+            el: '.swiper-pagination-banner',
+            // type: 'fraction',
+            clickable: true
+          },
+        });
+      })
+    </script>
+  </div>
+  <!-- end banner -->
+
+
+  <!-- index-pro1 -->
+  <div class="index-product1 flex">
+    <div class="pro1-txt w50 flex flex-al-center">
+      <div class="colorf pro1-txt-padding">
+        <h2 class="h2">触手可及，超乎想象</h2>
+        <p class="fon18 padding25">查找二手Phase One相机系统或零部件</p>
+        <p><a href="" class="fon14 pro1-more">去了解更多</a></p>
+      </div>
+    </div>
+    <div class="pro1-img positionr w50">
+      <img src="images/index/index-pro1-bg.jpg" alt="" srcset="" class="w100">
+      <div class="positionb">
+        <img src="images/index/index-pro.jpg" alt="" srcset="" class="w100">
+      </div>
+    </div>
+  </div>
+  <!-- end index-pro1 -->
+
+  <!--star 文化数字化遗产解决方案 -->
+  <div class="index-pro2 positionr colorf">
+    <!-- 占位符 -->
+    <img src="images/index/index-pro3-lbg.jpg" alt="" srcset="" class="w100">
+    <div class="pro2-img positionb">
+      <img src="images/index/index-pro3-lbg.jpg" alt="" srcset="" class="w100">
+    </div>
+    <div class="positionb flex flex-al-center">
+      <div class="padding-l8">
+        <h2 class="h2">文化</h2>
+        <br>
+        <h2 class="h2">遗产数字化解决方案 </h2>
+        <p class="padding25 fon14 ">有效满足不同项目需求的文化遗产数字化方案</p>
+        <p><a href="" class="underline colorf padding25">寻找你的方案</a></p>
+        <!-- video -->
+        <div class="video positionr">
+          <!-- 占位符 -->
+          <img src="images/index/index-pro2-bg.jpg" alt="" srcset="">
+          <div class="positionb">
+            <img src="images/index/index-pro-img.jpg" alt="" srcset="">
+          </div>
+          <div class="btn-video">
+            <img src="images/index/index-player-icon.png" alt="" srcset="">
+          </div>
+        </div>
+        <!-- end video -->
+      </div>
+    </div>
+  </div>
+  <!-- end 文化数字化遗产解决方案 -->
+
+  <!-- index-item3 -->
+  <div class="index-item3 bgf paddding20 flex colorf ">
+    <div class="w50 positionr">
+      <!-- 占位符 -->
+      <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100">
+      <div class="positionb">
+        <img src="images/index/index-pro3-img.jpg" alt="" srcset="" class="w100">
+      </div>
+      <div class="positionb">
+        <div class="w70">
+          <p class="fon30 item3-txt">XT 系列伴行<br>
+            Reuben Wu玻利维亚逐梦之旅</p>
+          <br><br>
+          <p><a href="" class="fon14 underline colorf">跟随我们共同见证</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="w50 positionr">
+      <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100">
+      <div class="positionb">
+        <img src="images/index/index-pro4-img.jpg" alt="" srcset="" class="w100">
+      </div>
+      <div class="positionb">
+        <div class="w70">
+          <p class="fon30 item3-txt fonar">Capture One</p>
+          <p>完整的图像编辑软件解决方案</p>
+          <br><br>
+          <p><a href="" class="fon14 underline colorf">了解更多</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end index-item3 -->
+
+  <!--star  index-item4 -->
+  <div class="index-item4 bg0 positionr  colorf">
+    <img src="images/index/index-pro5-bg1.jpg" alt="" srcset="" class="w100">
+    <div class="positionb">
+      <img src="images/index/index-pro5-bg.jpg" alt="" srcset="" class="w100">
+    </div>
+    <div class="player-icon"><img src="images/index/index-player-icon.png" alt="" srcset=""></div>
+    <div class="positionb ">
+      <div class="max1200 flex flex-al-end h100">
+        <div class="item4-txt">
+          <p><a href="" class="fon14 underline colorf">了解更多</a></p>
+          <br>
+          <br>
+          <h2 class="h2">工业解决方案</h2>
+          <div class="padding25">
+            用于测绘、测量、检验、农业等诸多应用的解决方案及组件
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end  index-item4 -->
+
+  <!--star  index-item5  申请演示-->
+  <div class="index-item5 bgf text-center">
+      <h2 class="fon44 h2 ">申请演示</h2>
+      <div class="padding25 color6  fon16">
+          我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
+      </div>
+      <br><br>
+      <div>
+        <p><a href="" class="button-l item5-btn">去登记</a></p>
+      </div>
+  </div>
+  <!--end  index-item5 申请演示 -->
+
+
+
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

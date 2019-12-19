@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+ 
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>虚拟现实</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="ny-banner positionr wow fadeIn">
+    <img src="images/news-banner.jpg" alt="" srcset="" class="w100">
+    <div class="positionb flex flex-center">
+      <img src="images/top-section.png" alt="" srcset="" class="new-banner-txt">
+    </div>
+  </div>
+  <!-- end banner -->
+
+  <!--star  news  -->
+  <div class="bgf padding70">
+    <div class="max1440 flex just-between news">
+      <div class="new-left">
+        <ul class="newslist" id="newslist">
+
+        </ul>
+        <script id="news_tpl" type="text/html">
+          {{#  layui.each(d.list, function(index, item){ }}
+          <li>
+              <div class="news-img positionr">
+                <img src="images/new-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+                <div class="positionb">
+                   <img src="images/new-img.jpg" alt="" srcset="" class="w100">
+                 </div>
+              </div>
+              <div class="news-con">
+                <p class="date fon16 color6">2019.8.2</p>
+                <p class="fon30 title">亮相China Joy Ximmerse MR线下娱乐引爆玩家热情</p>
+                <p class="line2 fon18 desc">2019 China Joy于8月2~5日在上海举办，高通创投成员Ximmerse携旗下全新MR交互系统Rhino X，以及多款线下一体化娱乐方案亮相，吸引了行业伙伴和众多玩家的现场关注。</p>
+                <p><a href=""   class='news-more fon18'>查看更多</a></p>
+              </div>
+            </li>
+            {{#  }); }}
+         </script>
+        <div class="page text-center flex ">
+          <a href="" class="page-prev-next">上一页</a>
+          <a href="">1</a>
+          <a href="">2</a>
+
+          <a href="">……</a>
+          <a href="">8</a>
+          <a href="" class="page-prev-next">下一页</a>
+        </div>
+      </div>
+      <script>
+        layui.use('laytpl', function () {
+          var laytpl = layui.laytpl;
+          var newslist = {
+            //品牌新闻数据
+            "list": [
+              {
+                "id": "02",
+                "date": "2019.8.2",
+                "title": "亮相China Joy Ximmerse MR线下娱乐引爆玩家热情",
+                "desc": "2019 China Joy于8月2~5日在上海举办，高通创投成员Ximmerse携旗下全新MR交互系统Rhino X，以及多款线下一体化娱乐方案亮相，吸引了行业伙伴和众多玩家的现场关注。",
+                "img": "images/new-img.jpg"
+              },
+              {
+                "id": "03",
+                "title": "一生一爱”明星婚嫁系列",
+                "desc": "以一为设计灵感，传递一爱一人生的幸福哲学，经由时间美丽隽永的信物，为你永久珍藏。",
+                "img": "images/new-img.jpg"
+              }
+            ]
+          }
+          var news_tpls = news_tpl.innerHTML;
+          var view = document.getElementById('newslist');
+          laytpl(news_tpls).render(newslist, function (html) {
+            view.innerHTML = html;
+          });
+
+        })
+      </script>
+      <div class="news-right ">
+        <div class="padding30 boxshadow">
+          <div class="new-right-form color0">
+            <p class="fon32 ">订阅XIMMERSE</p>
+            <p class="fon18">第一时间获取我们的更新和服务信息</p>
+            <div class="dy-form">
+              <input type="text" value="" class="dy-txt fon16" placeholder="您的邮箱">
+              <p><button class="news-btn trans">立即订阅</button></p>
+            </div>
+          </div>
+          <div class="new-right-zgh">
+            <p class="fon32">微信公众号</p>
+            <div class="new-code">
+              <img src="images/new-zgh.jpg" alt="" srcset="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end news -->
+
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

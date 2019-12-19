@@ -154,7 +154,7 @@ $colorfa: #fafafa;
   .banner{padding-top: 63px;
     .banner-txt{padding: 10px 0}
   }
-  .fon68{ font-size: 48px;}
+  .fon68{ font-size: 38px;}
   .button-l{ line-height: 35px;}
   .w50{ width: 100%}
   .index-product1 .pro1-txt-padding{
@@ -165,6 +165,47 @@ $colorfa: #fafafa;
   }
   .h2{ font-size: 34px;}
   .padding-l8{padding-left: 0;}
+  .pro2-img{ position: static !important;}
+  .p-padding20{padding: 20px;}
+  .index-pro2{padding: 30px 0;}
+  .index-item3 .w50{ width: 100%; margin-bottom: 20px;}
+  .index-item3{
+    .w70{ width: 90%;}
+  }
+  .index-item4 .player-icon{ top: 0;}
+  .index-item5{ padding: 30px 0;}
+  .padding100{ padding: 30px 0;}
+  .max440{ width: 70%;}
+  .footer-nav{padding: 20px 0;}
+  .ny-banner{padding-top: 63px;}
+
+  // about
+  .about-title{margin-bottom: 20px;}
+  .about-con{padding-top: 30px;}
+  .fon40{ font-size: 30px;}
+  .w50d{ width: 100%;}
+  .nybanner{padding-top:63px;}
+  .question-list .box{ padding: 20px 20px 30px;}
+  .question-list .h3{ padding: 10px 0;}
+  
+  .w30{ width: 100%;}
+  .w65{ width: 100%;}
+  .p-marginb20{ margin-bottom: 20px;}
+  .padding-t50{ padding-top: 25px;}
+  .padding25{ padding: 12px 0;}
+  .p-padding-t60{padding-top: 60px;}
+
+  .hz-list{
+    padding-top:20px; padding-bottom: 30px;
+    li{width: 31%; margin-bottom: 15px;}
+    
+  }
+
+  #tujing_list{
+    margin-left: 0; margin-right:0;
+    .box-line{width: 100%;margin: 0 0 20px 0;}
+  }
+  .goumai-title{flex-wrap: nowrap; overflow-x: scroll;}
 }
 
 @media (max-width: 640px){

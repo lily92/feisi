@@ -12,7 +12,7 @@ body {
   overflow-y: scroll;
   width: 100%;
   color: $color0;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 body,
@@ -227,9 +227,10 @@ select,
   -moz-osx-font-smoothing: grayscale;
    text-align: center;
   box-sizing: border-box;
-  color: #37474f;
+   color: #37474f;
    border: 1px solid #3cafd6;
    border-radius: 30px;
+   background: $colorb; color: $colorf;
 }
 
 
@@ -252,7 +253,7 @@ select,
   left: 0;
   width: 100%;
   height: 100%;
-  background: $color0;
+  background: #0493d4;
   z-index: -1;
   opacity: 0;
   -webkit-transform: scale3d(.7, 1, 1);
@@ -265,7 +266,7 @@ select,
 
 .button-l:hover {
   color: #fff;
-  border-color:$color0
+  border-color:#0493d4
 }
 
 .button-l:hover::before {
@@ -323,6 +324,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .padding-l8{padding-left: 8%;}
 
 .index-pro2{
+  padding: 100px 0; margin-bottom: 20px;
   .video{margin-top: 50px;}
   .btn-video{ bottom: 35px; left: 20px; position: absolute;}
 }
@@ -359,6 +361,68 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .icon-wb:hover{ background: url(../images/common/weibo-icon1.png);}
 .footer-icon:hover{ color: $colorb; cursor: pointer;}
 .footer-nav{ padding: 40px 0;}
+.index-down-icon{ position: fixed; width: 25px; height: 38px; background: url(../images/index/index-mouse.png) no-repeat center; left: 50%; bottom: 40px; transform: translateX(-50%); z-index: 10;}
+.max830{ max-width: 830px; margin: 0 auto; padding: 20px; line-height: 2;}
+.about-title{ margin-bottom: 50px;}
+.about-con{padding-top: 100px;}
+.jishu-txt{ padding: 50px 20px;}
+.js-desc{padding: 50px 0;}
+.sousuo{ display: block; width: 40px; height: 40px; background: url(../images/sousuo.png) no-repeat center $colorb; border-radius: 50%; margin: 0 auto; font-size: 0;}
+.question-list{ margin-bottom: 20px;}
+.bgf7{background: #f7f7f7; }
+.w50d{width: calc(50% - 10px);}
+.fon40{ font-size: 40px;}
+.question-list{
+  .box{padding: 40px 20px 60px; margin-bottom: 20px;}
+  .h3{ line-height: 1; padding: 20px 0;}
+  .list{ min-height: 70px;}
+}
+.colorb{ color: $colorb;}
+.list-b p { padding: 5px 0;}
+.jishu-item{ padding: 50px 0;}
+.jishu-link{
+  li{padding: 10px 0; font-weight: bold;}
+  a{ display: block;}
+  a:hover{ color: $colorb;}
+}
+.box-line{ padding: 30px 40px; border-top: 3px solid $colorb; box-shadow: 0 0 5px rgba($color: #000, $alpha: 0.23);  background: $colorf;}
+.w30{ width: 30%;}
+.w65{ width: 65%;}
+.padding-t50{ padding-top: 50px;}
+.contact-txt{ width: 100%; padding: 15px 10px; border-radius: 5px; border: 1px solid #d9d9d9; background: none; height: 45px;}
+.margin-t25{margin-top: 25px;}
+.contact{
+  .check{ padding-left: 20px; background:url(../images/gout-1.png) no-repeat left center}
+  .check.active{ background:url(../images/gou.png) no-repeat left center}
+  .radio { padding-top: 20px;}
+  .radio  input{ margin-right:3px;}
+  .radio span{ margin-left: 30px; align-items: center; margin-right: 10px;}
+  .textarea{border: 1px solid #d9d9d9; border-radius: 5px; width: 100%; resize: none; padding: 15px;}
+  .btn-submit{ width: 105px;margin:  50px auto 0;}
+  .contact-box{padding-left: 25px; padding-right: 25px;}
+}
+.hz-list{
+  padding-top:20px; padding-bottom: 30px;
+  li{width: 18%;margin: 0 1% 20px; border: 1px solid #cccccc; border-radius: 3px;}
+  a{ display: block;}
+}
+
+.goumai-title{
+  border-bottom: 1px solid #ccc; padding-bottom: 25px;
+  a{margin-right: 60px; white-space: nowrap;}
+}
+.goumai-title-sub{
+  a{margin: 0 15px;}
+  a:hover,a.cur{ color: $colorb;}
+}
+.padding-p10{
+  padding-top: 25px;
+  p{padding: 7px 0;}
+}
+#tujing_list{
+  margin-left: -1%; margin-right: -1%;
+  .box-line{width: 31.333%;margin: 0 1% 50px;}
+}
 
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}

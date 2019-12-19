@@ -48,6 +48,7 @@
     </div>
 
     <div class="swiper-pagination-banner swiper-pagination"></div>
+    <span class="index-down-icon"></span>
     <script>
       $(function () {
         var swiper = new Swiper('.banner', {
@@ -85,14 +86,11 @@
   <!-- end index-pro1 -->
 
   <!--star 文化数字化遗产解决方案 -->
-  <div class="index-pro2 positionr colorf">
+  <div class="index-pro2 positionr colorf"
+    style="background: url(images/index/index-pro3-lbg.jpg) no-repeat center;background-size: cover;">
     <!-- 占位符 -->
-    <img src="images/index/index-pro3-lbg.jpg" alt="" srcset="" class="w100">
-    <div class="pro2-img positionb">
-      <img src="images/index/index-pro3-lbg.jpg" alt="" srcset="" class="w100">
-    </div>
-    <div class="positionb flex flex-al-center">
-      <div class="padding-l8">
+    <div class=" flex flex-al-center">
+      <div class="padding-l8 p-padding20">
         <h2 class="h2">文化</h2>
         <br>
         <h2 class="h2">遗产数字化解决方案 </h2>
@@ -116,7 +114,7 @@
   <!-- end 文化数字化遗产解决方案 -->
 
   <!-- index-item3 -->
-  <div class="index-item3 bgf paddding20 flex colorf ">
+  <div class="index-item3 bgf padding20 flex colorf ">
     <div class="w50 positionr">
       <!-- 占位符 -->
       <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100">
@@ -174,16 +172,20 @@
 
   <!--star  index-item5  申请演示-->
   <div class="index-item5 bgf text-center">
-      <h2 class="fon44 h2 ">申请演示</h2>
-      <div class="padding25 color6  fon16">
-          我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
-      </div>
+    <h2 class="fon44 h2 ">申请演示</h2>
+    <div class="padding25 color6  fon16">
+      我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
+    </div>
+    <div class="padding hidden-xs">
       <br><br>
-      <div>
-        <p><a href="" class="button-l item5-btn">去登记</a></p>
-      </div>
+    </div>
+    <div>
+      <p><a href="" class="button-l item5-btn">去登记</a></p>
+    </div>
   </div>
   <!--end  index-item5 申请演示 -->
+
+
 
 
 
@@ -192,6 +194,22 @@
   <footer>
   </footer>
   <!-- end footer -->
+
+  <script>
+    $(function () {
+      $(window).scroll(function () {
+        //创建一个变量存储当前窗口下移的高度
+        var scroTop = $(window).scrollTop();
+        //如果大于100，则显示顶部元素，否则隐藏顶部元素
+        if (scroTop > 100) {
+          $('header').addClass('active')
+        } else {
+          $('header').removeClass('active')
+        }
+      }
+      );
+    })
+  </script>
 
 </body>
 

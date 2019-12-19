@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>飞思</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="active">
+  </header>
+  <!--end  header -->
+  <div class="nybanner positionr">
+    <img src="images/tj-banner.jpg" alt="" srcset="" class="w100">
+
+  </div>
+  <!--star 购买途径  -->
+  <div class="  bgf7 tujing ">
+    <div class="max1200">
+
+      <div class="padding-t50">
+        <h2 class="h2 text-center">购买途径</h2>
+        <div class="flex padding-t50 fon16  goumai-title">
+          <a href="">华北地区</a>
+          <a href="">华东地区</a>
+          <a href="">华南地区</a>
+          <a href="">华西地区</a>
+          <a href="">Phase One 工业相机</a>
+          <a href="">CH 文化遗产解决方案</a>
+          <a href="">打印行业</a>
+          <a href="">A系列</a>
+        </div>
+        <div class="text-center fon16   padding-t50 goumai-title-sub ">
+          <a href="" class="cur"><b>华北代理商</b></a>
+          <a href=""><b>华北经销商</b></a>
+        </div>
+        <div class="flex  padding-t50 fon16" id="tujing_list">
+
+
+        </div>
+        <script id="goumaitujing_tpl" type="text/html">
+          {{#  layui.each(d.list, function(index, item){ }}
+          <div class="box-line  contact-box  p-marginb20">
+            <p class=""><b>{{item.name}}</b></p>
+            <div class="color6 padding-p10 ">
+              <p class="address ">地址：{{item.address}}</p>
+              <p class="tel ">电话：{{item.tel}}</p>
+              <p>传真：{{item.fax}}</p>
+              <p>联系人：{{item.contact}}</p>
+            </div>
+          </div>
+            {{#  }); }}
+         </script>
+        <script>
+          layui.use('laytpl', function () {
+            var laytpl = layui.laytpl;
+            var tujing_list = {
+              //品牌新闻数据
+              "list": [
+                {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                }, {
+                  "id": "02",
+                  "name": "北京量子优艺科技有限公司",
+                  "address": "地址：北京市海淀区中关村东路18号财智国际大厦C1909",
+                  "tel": "+852 2896 7088",
+                  "fax": "+86-10-82600477",
+                  "contact": "刘思强"
+                },
+              ]
+            }
+            var goumaitujing_tpls = goumaitujing_tpl.innerHTML;
+            var view = document.getElementById('tujing_list');
+            laytpl(goumaitujing_tpls).render(tujing_list, function (html) {
+              view.innerHTML = html;
+            });
+
+          })
+        </script>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- end 购买途径 -->
+
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

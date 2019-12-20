@@ -255,7 +255,7 @@
     padding-top: 30px;
   }
   .fon40 {
-    font-size: 30px;
+    font-size: 25px;
   }
   .w50d {
     width: 100%;
@@ -320,31 +320,44 @@
   .max960 {
     padding: 25px 20px 0 20px;
   }
-}
-
-.padding50 {
-  padding: 25px 0;
-}
-
-.max1200 {
-  width: 100%;
-  padding-left: 15px !important;
-  padding-right: 15px !important;
-}
-
-.hd_list {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.hd_list li {
-  margin: 0 0 15px;
-}
-
-.p-text-left {
-  text-align: left;
-}
-
-.page-prev, .page-next {
-  width: 100%;
+  .padding50 {
+    padding: 25px 0;
+  }
+  .max1200 {
+    width: 100%;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .hd_list {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hd_list li {
+    margin: 0 0 15px;
+  }
+  .p-text-left {
+    text-align: left;
+  }
+  .page-prev, .page-next {
+    width: 100%;
+  }
+  .padding20 {
+    padding: 10px;
+  }
+  .ziliaoku {
+    padding-top: 50px;
+  }
+  .ziliaoku-left {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .ziliaoku-right {
+    width: 100%;
+  }
+  .reuben .fon34 {
+    font-size: 16px;
+  }
+  .banner-txt {
+    padding: 0 15px;
+  }
 }

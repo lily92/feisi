@@ -33,38 +33,100 @@
 
   <!--star  about  -->
   <div class="about-con ">
-    <div class="max830   ">
-      <h2 class="h2 color0 text-center about-title">关于 PHASE ONE</h2>
+    <div class="max1200">
+      <h2 class="h2 color0 text-center about-title">为什么要通过 Phase One 将文化遗产系列数字化？</h2>
 
       <div class="text-center color6 fon14">
-        <p>Phase One A/S是世界领先的中画幅数码摄影系统和为专业摄影师提供成像解决方案和工业应用的供应商。<br>
-          成立于90年代初期，Phase One是一个真正的数码摄影先驱，带着满腔热情的承诺追求卓越画质和创作自由。<br>
-          Phase One的工程和设计的专业知识在高像素拍摄系统中获得了成像方面的突破，更先进的软件更好的拍摄工作流程和源文件编辑<br>
-          能力。Phase One在优化硬件和软件集成的理解和才能，突显于其屡获殊荣的Capture One Pro软件—专业摄影师的广泛首选。<br>
-          Phase One的产业分工主要侧重于航拍采集文化遗产保护的图像精度的工业应用当中。—测绘地球，保护珍贵艺术品和作品。</p>
-        <p>总部设在丹麦哥本哈根，并接受北欧设计精益求精的高要求，Phase One致力于提供最佳的图像质量和用户体验。<br>
-          在纽约、东京、科隆、上海和特拉维 夫设有办事处，并与全球合作伙伴的专家组一起，<br>
-          Phase One致力于服务及为全球客户提供支持。<br>
-          Phase One和Capture One的注册商标为Phase One A/S。所有其他品牌或产品名称是其各自所有者的商标或注册商标。</p>
-          <br><br><br>
-        <p class="">
-          <img src="images/about-img.jpg" alt="" srcset="">
-        </p>
+        <p class="lineh2">文化遗产成像的根源在于保留过去，造福未来的理念。博物馆和图书馆对历史馆藏数字化的需求正在迅速增长，越来越多地关注未来公众信息获取，公众信息研究和保护。通常都是与时间赛跑，快速拍摄的解决方案不仅是必要的，而且往往是至关重要的。  </p>
       </div>
-      <!--star  index-item5  申请演示-->
-      <div class="index-item5 bgf text-center">
-        <h2 class="fon44 h2 ">申请演示</h2>
-        <div class="padding25 color6  fon16">
-          我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
-        </div>
-        <div class="padding hidden-xs">
-          <br><br>
-        </div>
-        <div>
-          <p><a href="" class="button-l item5-btn">去登记</a></p>
+      <p><br><br></p>
+      <ul class="bgf7 padding20 flex just-between" id="culturelist">
+       
+      </ul>
+      <script id="cultures_tpl" type="text/html">
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li class="w50d  padding20 bgf">
+          <div class="c-img positionr ">
+            <img src="images/culture-img-bg.jpg" alt="" srcset="" class="w100">
+            <div class="positionb">
+              <img src="{{item.img}}" alt="" srcset="" class="w100">
+            </div>
+          </div>
+          <div class='bgf'>
+            <p class="fon40">{{item.title}}</p>
+            <p  class="lineh2 ">{{item.desc}}</p>
+          </div>
+        </li>
+          {{#  }); }}
+       </script>
+      <script>
+        layui.use('laytpl', function () {
+          var laytpl = layui.laytpl;
+          var culturelist = {
+            //品牌新闻数据
+            "list": [
+              {
+                "id": "02",
+                "title": "胶片扫描解决方案",
+                "desc": "资料的均匀照明和良好的色彩再现在胶片和负片数字化中必不可少，因此在处理期间可获取所有色彩信息，这有时涉及将图像正负片切换。中画幅即时拍摄与翻拍扫描相比具有巨大的速度优势，可以将流程处理速度提高 300 倍或更多。＆nbsp; Phase One 解决方案专注于色彩精确度、工作流程高效性以及特定材料的解决方案，是透明胶片和玻璃板负片数字化的理想选择。",
+                "img": "images/culture-img.jpg"
+              },
+              {
+                "id": "02",
+                "title": "平面翻拍扫描解决方案",
+                "desc": "资料的均匀照明和良好的色彩再现在胶片和负片数字化中必不可少，因此在处理期间可获取所有色彩信息，这有时涉及将图像正负片切换。中画幅即时拍摄与翻拍扫描相比具有巨大的速度优势，可以将流程处理速度提高 300 倍或更多。＆nbsp; Phase One 解决方案专注于色彩精确度、工作流程高效性以及特定材料的解决方案，是透明胶片和玻璃板负片数字化的理想选择。",
+                "img": "images/culture-img.jpg"
+              },{
+                "id": "02",
+                "title": "胶片扫描解决方案",
+                "desc": "资料的均匀照明和良好的色彩再现在胶片和负片数字化中必不可少，因此在处理期间可获取所有色彩信息，这有时涉及将图像正负片切换。中画幅即时拍摄与翻拍扫描相比具有巨大的速度优势，可以将流程处理速度提高 300 倍或更多。＆nbsp; Phase One 解决方案专注于色彩精确度、工作流程高效性以及特定材料的解决方案，是透明胶片和玻璃板负片数字化的理想选择。",
+                "img": "images/culture-img.jpg"
+              },
+              {
+                "id": "02",
+                "title": "平面翻拍扫描解决方案",
+                "desc": "资料的均匀照明和良好的色彩再现在胶片和负片数字化中必不可少，因此在处理期间可获取所有色彩信息，这有时涉及将图像正负片切换。中画幅即时拍摄与翻拍扫描相比具有巨大的速度优势，可以将流程处理速度提高 300 倍或更多。＆nbsp; Phase One 解决方案专注于色彩精确度、工作流程高效性以及特定材料的解决方案，是透明胶片和玻璃板负片数字化的理想选择。",
+                "img": "images/culture-img.jpg"
+              },
+            ]
+          }
+          var culture_tpls = cultures_tpl.innerHTML;
+          var view = document.getElementById('culturelist');
+          laytpl(culture_tpls).render(culturelist, function (html) {
+            view.innerHTML = html;
+          });
+
+        })
+      </script>
+      <!-- 联系电话以及地址 -->
+       <div class="padding-t50 marginb-b50">
+        <h2 class="h2 text-center">联络地址及电话</h2>
+        <div class="flex just-between padding-t50 fon16">
+          <div class="box-line w30 contact-box  p-marginb20">
+            <p class=""><b>香港</b></p>
+            <div>
+              <p class="address padding25">香港小西湾新业街8号商业广场10楼1009室</p>
+              <p class="tel color6">电话：+852 2896 7088</p>
+            </div>
+          </div>
+          <div class="box-line w30 contact-box p-marginb20">
+            <p class=""><b>广州</b></p>
+            <div>
+              <p class="address padding25">广州市海珠区昌岗中路238号
+                达镖国际中心1110室 </p>
+              <p class="tel color6">电话： +86 20 8920 2460</p>
+            </div>
+          </div>
+          <div class="box-line w30 contact-box p-marginb20">
+            <p class=""><b>北京</b></p>
+            <div>
+              <p class="address padding25">北京丰台广安路国投财富4号楼1710</p>
+              <p class="tel color6">电话：+86 13801123818</p>
+            </div>
+          </div>
         </div>
       </div>
-      <!--end  index-item5 申请演示 -->
+     
     </div>
   </div>
   <!-- end about -->

@@ -182,7 +182,7 @@ $colorfa: #fafafa;
   // about
   .about-title{margin-bottom: 20px;}
   .about-con{padding-top: 30px;}
-  .fon40{ font-size: 30px;}
+  .fon40{ font-size: 25px;}
   .w50d{ width: 100%;}
   .nybanner{padding-top:63px;}
   .question-list .box{ padding: 20px 20px 30px;}
@@ -210,15 +210,24 @@ $colorfa: #fafafa;
   .pocs-list .w30{margin-bottom:15px;}
   .pocs-list .pocs-desc{margin-bottom: 15px;}
   .max960{  padding: 25px 20px 0 20px;}
+
+  .padding50{ padding: 25px 0;}
+  .max1200{ width: 100%; padding-left: 15px !important; padding-right: 15px !important;}
+  .hd_list{
+    margin-left: 0; margin-right:0;
+    li{ margin: 0 0 15px;}
+  }
+  .p-text-left{ text-align: left;}
+  .page-prev,.page-next{ width: 100%;}
+  .padding20{ padding: 10px;}
+  .ziliaoku{padding-top: 50px;}
+  .ziliaoku-left{ width: 100%; margin-bottom: 20px;}
+  .ziliaoku-right{ width: 100%;}
+  .reuben .fon34{ font-size: 16px;}
+  .banner-txt{padding: 0 15px;}
 }
-.padding50{ padding: 25px 0;}
-.max1200{ width: 100%; padding-left: 15px !important; padding-right: 15px !important;}
-.hd_list{
-  margin-left: 0; margin-right:0;
-  li{ margin: 0 0 15px;}
-}
-.p-text-left{ text-align: left;}
-.page-prev,.page-next{ width: 100%;}
+
+
 
 @media (max-width: 640px){
  

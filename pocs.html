@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>飞思</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="active">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="ny-banner">
+    <img src="images/pocs-banner.jpg" alt="" srcset="" class="w100">
+  </div>
+  <!-- end banner -->
+
+  <!--star  pocs  -->
+  <div class="pocs  max1200">
+    <div class="padding100 text-center">
+      <h2 class="h2">现时全国POCS认证工作室名单</h2>
+      <p class="padding25 color6 lineh2">POCS，受到越来越多工作室、影棚的推崇。在这纷扰的摄影市场浪潮里，越来越多的工作室已经意识到“专业是需要认证的”。得到官方机构的认证，<br>
+        才能更快地在行业内脱颖而出，而POCS就是一份实质的认证！</p>
+    </div>
+    <ul class="pocs-list text-center" id="pocslist">
+
+    </ul>
+    <script id="pocs_tpl" type="text/html">
+      {{#  layui.each(d.list, function(index, item){ }}
+      <li>
+        <div class="pocs-desc">
+          <p class="fon16 color0 padding25"><b>{{item.company}}</b></p>
+          <div class="color6 lineh2">
+            <p> 联系人：{{item.name}}</p>
+            <p>电话：{{item.tel}}</p>
+            <p>联系地址：{{item.address}}</p>
+          </div>
+        </div>
+        <div class="pocs-img flex">
+          {{#  layui.each(item.img, function(index, item){ }}
+          <div class="w30 positionr">
+            <img src="images/posc-img-bg.jpg" alt="" srcset="" class="w100">
+            <div class=" positionb">
+              <img src="images/posc-img.jpg" alt="" srcset="" class="w100">
+            </div>
+          </div>
+          {{#  }); }}
+        </div>
+      </li>
+        {{#  }); }}
+     </script>
+    <script>
+      layui.use('laytpl', function () {
+        var laytpl = layui.laytpl;
+        var pocslist = {
+          //品牌新闻数据
+          "list": [
+            {
+              "id": "02",
+              "company": "壹想视觉摄影棚",
+              "name": "陈永龙",
+              "tel": "18665024082",
+              "address": "广州市壹想视觉平面设计有限公司",
+              "img": [
+                {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }
+              ]
+            },{
+              "id": "02",
+              "company": "壹想视觉摄影棚",
+              "name": "陈永龙",
+              "tel": "18665024082",
+              "address": "广州市壹想视觉平面设计有限公司",
+              "img": [
+                {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }
+              ]
+            },{
+              "id": "02",
+              "company": "壹想视觉摄影棚",
+              "name": "陈永龙",
+              "tel": "18665024082",
+              "address": "广州市壹想视觉平面设计有限公司",
+              "img": [
+                {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }
+              ]
+            },{
+              "id": "02",
+              "company": "壹想视觉摄影棚",
+              "name": "陈永龙",
+              "tel": "18665024082",
+              "address": "广州市壹想视觉平面设计有限公司",
+              "img": [
+                {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }
+              ]
+            },{
+              "id": "02",
+              "company": "壹想视觉摄影棚",
+              "name": "陈永龙",
+              "tel": "18665024082",
+              "address": "广州市壹想视觉平面设计有限公司",
+              "img": [
+                {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }, {
+                  url: "images/posc-img.jpg"
+                }
+              ]
+            },
+          ]
+        }
+        var pocs_tpls = pocs_tpl.innerHTML;
+        var view = document.getElementById('pocslist');
+        laytpl(pocs_tpls).render(pocslist, function (html) {
+          view.innerHTML = html;
+        });
+
+      })
+    </script>
+  </div>
+  <!-- end pocs -->
+
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

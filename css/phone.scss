@@ -163,7 +163,7 @@ $colorfa: #fafafa;
   .index-product1 .pro1-more{
     margin-top: 20px; margin-bottom: 20px;
   }
-  .h2{ font-size: 34px;}
+  .h2{ font-size: 30px;}
   .padding-l8{padding-left: 0;}
   .pro2-img{ position: static !important;}
   .p-padding20{padding: 20px;}
@@ -206,7 +206,19 @@ $colorfa: #fafafa;
     .box-line{width: 100%;margin: 0 0 20px 0;}
   }
   .goumai-title{flex-wrap: nowrap; overflow-x: scroll;}
+  .pocs-list{margin-left: 0; margin-right: 0;}
+  .pocs-list .w30{margin-bottom:15px;}
+  .pocs-list .pocs-desc{margin-bottom: 15px;}
+  .max960{  padding: 25px 20px 0 20px;}
 }
+.padding50{ padding: 25px 0;}
+.max1200{ width: 100%; padding-left: 15px !important; padding-right: 15px !important;}
+.hd_list{
+  margin-left: 0; margin-right:0;
+  li{ margin: 0 0 15px;}
+}
+.p-text-left{ text-align: left;}
+.page-prev,.page-next{ width: 100%;}
 
 @media (max-width: 640px){
  

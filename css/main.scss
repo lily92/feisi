@@ -485,6 +485,14 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .banner-txt{ align-items: flex-end; padding-bottom: 50px;}
 .ershou-btn{ line-height: 35px; width: 100px; margin: 0 auto;}
 .max940{ max-width: 940px; padding: 0 20px; margin: 0 auto;}
+.ershou-txt{ width: 100%; padding: 10px 15px; border: 1px solid #d9d9d9; height: 50px;  border-radius: 5px; margin-bottom:30px}
+.w47{ width:47%}
+.check-box-top{ margin: 5px 5px  0 0 }
+.btn-ershou{ width: 100px; margin:50px auto; line-height: 44px}
+.ershou-box{ padding-top: 25px;
+  p{ padding: 5px 0}
+}
+.btnw100{ width: 100px; margin: 0 auto}
 
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}

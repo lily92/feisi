@@ -458,6 +458,17 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 }
 .page-next{ margin-top: 20px;}
 .zghd-detail{padding-top: 100px !important;}
+.prod-con{ margin-bottom: 30px;}
+.prod-left{ width: 28.6%}
+.prod-right{ width: 71.4%; padding: 20px 5%}
+.padding15{ padding: 15px 0}
+.jt-btn{ width: 140px;  line-height: 38px; margin-top: 20px;}
+.padding20{ padding: 20px;}
+.jt-table{
+  td{ padding: 5px }
+}
+.noshow-about #contention{ display: none}
+.padding-b30{ padding-bottom: 30px}
 
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}

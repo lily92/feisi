@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
@@ -45,18 +45,18 @@
       {{#  layui.each(d.list, function(index, item){ }}
       <li>
         <div class="pocs-desc">
-          <p class="fon16 color0 padding25"><b>{{item.company}}</b></p>
+          <p class="fon16 color0 padding25 wow fadeInUp"><b>{{item.company}}</b></p>
           <div class="color6 lineh2">
-            <p> 联系人：{{item.name}}</p>
-            <p>电话：{{item.tel}}</p>
-            <p>联系地址：{{item.address}}</p>
+            <p  class='wow fadeInUp ' data-wow-delay="500ms"> 联系人：{{item.name}}</p>
+            <p class='wow fadeInUp' data-wow-delay="600ms">电话：{{item.tel}}</p>
+            <p class='wow fadeInUp' data-wow-delay="700ms">联系地址：{{item.address}}</p>
           </div>
         </div>
         <div class="pocs-img flex">
           {{#  layui.each(item.img, function(index, item){ }}
-          <div class="w30 positionr">
+          <div class="w30 positionr wow fadeInUp" data-wow-delay="0.{{index+5}}s" data-wow-duration="2s">
             <img src="images/posc-img-bg.jpg" alt="" srcset="" class="w100">
-            <div class=" positionb">
+            <div class=" positionb ">
               <img src="images/posc-img.jpg" alt="" srcset="" class="w100">
             </div>
           </div>

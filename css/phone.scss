@@ -151,8 +151,12 @@ $colorfa: #fafafa;
   }
   // end nav 
 
-  .banner{padding-top: 63px;
+  .banner{margin-top: 63px;
     .banner-txt{padding: 10px 0}
+  }
+  .banner.swiper-container{
+    .swiper-button-next{ right: 5px;}
+    .swiper-button-prev{ left: 5px;}
   }
   .fon68{ font-size: 38px;}
   .button-l{ line-height: 35px;}
@@ -229,6 +233,18 @@ $colorfa: #fafafa;
   .w47{ width: 100%}
   .ershou .fon34{ font-size: 24px}
   .btn-ershou{ margin: 25px auto}
+
+  .w45{width: 100%;}
+  .w41{ width: 100%;}
+  .capture-list {
+    ul{margin-left: 0; margin-right: 0; }
+    li{ width: 100%;margin-bottom: 10px;}
+  }
+  .capture-list2-left{ width: 100%;}
+  .capture-list2-right{ width: 100%; margin-top: 20px;}
+  .capture-list2-right li{ width: 47.5%;}
+  .p-position-static{ position: static;}
+  .p-position-static .paddinga25.colorf{ color: #000 !important; padding: 15px 0;}
 }
 
 

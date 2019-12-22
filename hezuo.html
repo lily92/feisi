@@ -27,9 +27,10 @@
 
   <!--star  hezuo  -->
   <div class="nybanner positionr">
-    <img src="images/hz-banner.jpg" alt="" srcset="" class="w100">
+    <img src="images/hz-banner.jpg" alt="" srcset="" class="w100 hidden-xs wow fadeIn">
+    <img src="images/hz-banner.jpg" alt="" srcset="" class="w100 visible-xs  wow fadeIn">
     <div class="positionb flex  flex-center">
-      <div class="colorf text-center">
+      <div class="colorf text-center wow fadeInUp0">
         <p class="fon36">合作伙伴 </p>
         <p>与全球合作伙伴,带着满腔热情的承诺追求卓越画质和创作自由</p>
       </div>
@@ -51,8 +52,8 @@
   </div>
   <script id="hezuo_tpl" type="text/html">
     {{#  layui.each(d.list, function(index, item){ }}
-    <li>
-      <a href="" class="positionr">
+    <li class='wow fadeInUp0' data-wow-delay='0.{{index}}s'>
+      <a href="" class="positionr " >
         <img src="images/hz-img-bg.jpg" alt="" srcset="" class="w100">
         <div class="positionb">
           <img src="images/hz-img1.jpg" alt="" srcset=" " class="w100">

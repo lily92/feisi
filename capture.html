@@ -37,6 +37,7 @@
       </div>
     </div>
   </div>
+  <span class="index-down-icon"></span>
   <!-- end banner -->
 
   <!--star  capture  -->
@@ -61,7 +62,8 @@
         <div class="positionr max800">
           <img src="images/capture/cap-video.jpg" alt="" srcset="">
           <div class="positionb flex flex-center ">
-            <img src="images/index/index-player-icon.png" alt="" srcset="" class="play-icon">
+            <img src="images/index/index-player-icon.png" alt="" srcset="" class="play-icon"
+              data-url="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400">
           </div>
         </div>
       </div>
@@ -84,6 +86,25 @@
     </div>
   </div>
   <!-- end capture -->
+  <script>
+    $(function () {
+      var video = document.getElementById('video')
+      $('.play-icon').click(function (e) {
+        e.preventDefault();
+        var url = $(this).attr('data-url');
+        $('#video').attr('src', url)
+        $('.video-master').css('display', 'flex')
+        video.play();
+
+      });
+      $('.close-btn').click(function (e) {
+        e.preventDefault();
+        $('.video-master').css('display', 'none')
+        video.pause();
+        $('#video').attr('src', '')
+      });
+    })
+  </script>
 
   <div class="bg2b padding50">
     <div class="max1200 flex just-between">
@@ -161,13 +182,13 @@
             <!-- 图片占位符，勿读后台 -->
             <img src="images/capture/cap-list2-img2-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
-              <img src="images/capture/cap-list2-img2.jpg" alt="" srcset="" class="w100">
+              <img src="{{item.img}}" alt="" srcset="" class="w100">
             </div>
           </div>
           <div class="cap-list2-con lineh2">
-            <p class="fon18 margin-t20">Capture One（for Sony）20</p>
+            <p class="fon18 margin-t20">{{item.title}}</p>
             <p  class="color6">
-              适用于每一位 Sony 相机持有者。与 Capture One Pro 相同的工具 – 专属于 Sony。</p>
+              {{item.desc}}</p>
           </div>
         </li>
         {{#  }); }}
@@ -183,35 +204,41 @@
     <div class="positionb flex flex-item-end p-position-static">
       <div class="paddinga25 colorf">
         <p class="fon18">Capture One Styles
-          </p>
-          <p>使用我们的即时外观效果集，为您的 Capture One 软件增添更多可能性。</p>
-          <br>
-          <ul class="lineh2">
-            <li>·JS-05</li>
-            <li>·Reverie-Beta</li>
-            <li>·Pro 400H</li>
-            <li>·MT-06</li>
-            <li>`BM-02</li>
-          </ul>
+        </p>
+        <p>使用我们的即时外观效果集，为您的 Capture One 软件增添更多可能性。</p>
+        <br>
+        <ul class="lineh2">
+          <li>·JS-05</li>
+          <li>·Reverie-Beta</li>
+          <li>·Pro 400H</li>
+          <li>·MT-06</li>
+          <li>`BM-02</li>
+        </ul>
       </div>
     </div>
   </div>
   <!-- end item4 -->
-   
-    <!--star  index-item5  申请演示-->
-    <div class="index-item5 bgf text-center">
-      <h2 class="fon44 h2  wow fadeInUp">申请演示</h2>
-      <div class="padding25 color6  fon16  wow fadeInUp">
-        我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
-      </div>
-      <div class="padding hidden-xs">
-        <br><br>
-      </div>
-      <div>
-        <p class=" wow fadeInUp"><a href="" class="button-l item5-btn">去登记</a></p>
-      </div>
+
+  <!--star  index-item5  申请演示-->
+  <div class="index-item5 bgf text-center">
+    <h2 class="fon44 h2  wow fadeInUp">申请演示</h2>
+    <div class="padding25 color6  fon16  wow fadeInUp">
+      我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
     </div>
-    <!--end  index-item5 申请演示 -->
+    <div class="padding hidden-xs">
+      <br><br>
+    </div>
+    <div>
+      <p class=" wow fadeInUp"><a href="" class="button-l item5-btn">去登记</a></p>
+    </div>
+  </div>
+  <!--end  index-item5 申请演示 -->
+
+  <!-- 飞思，video 播放 -->
+  <div class="video-master animated slideInRight flex flex-center">
+    <img src="images/btn-close.png" alt="" srcset="" class="close-btn">
+    <video class="animated flipInX video" controls src="" poster="images/index-about-img.jpg" id="video" />
+  </div>
 
   <script>
     layui.use('laytpl', function () {
@@ -223,55 +250,55 @@
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           }, {
             "id": "02",
             "title1": "完全控制您的对比度",
             "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
+            "img": "images/capture/cap-img0.jpg",
             "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
           },
         ]
@@ -283,28 +310,26 @@
         "list": [
           {
             "id": "02",
-            "title1": "完全控制您的对比度",
-            "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
-            "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
-          },{
+            "title": "Capture One（for Sony）20",
+            "img": "images/capture/cap-list2-img2.jpg",
+            "desc": "适用于每一位 Sony 相机持有者。与 Capture One Pro 相同的工具 – 专属于 Sony。"
+          }, {
             "id": "02",
-            "title1": "完全控制您的对比度",
-            "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
-            "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
-          },{
+            "title": "Capture One（for Sony）20",
+            "img": "images/capture/cap-list2-img2.jpg",
+            "desc": "适用于每一位 Sony 相机持有者。与 Capture One Pro 相同的工具 – 专属于 Sony。"
+          },
+          {
             "id": "02",
-            "title1": "完全控制您的对比度",
-            "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
-            "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
-          },{
+            "title": "Capture One（for Sony）20",
+            "img": "images/capture/cap-list2-img2.jpg",
+            "desc": "适用于每一位 Sony 相机持有者。与 Capture One Pro 相同的工具 – 专属于 Sony。"
+          },
+          {
             "id": "02",
-            "title1": "完全控制您的对比度",
-            "title2": "高动态范围工具",
-            "img": "images/capture/cap-list-img-bg.jpg",
-            "desc": "借助新的高动态范围工具，可以在对比度和色调上做更多操作。恢复高光、增强阴影、变暗黑色或增强照片中的最亮区域 - 所有这些功能都可通过一种工具完成。"
+            "title": "Capture One（for Sony）20",
+            "img": "images/capture/cap-list2-img2.jpg",
+            "desc": "适用于每一位 Sony 相机持有者。与 Capture One Pro 相同的工具 – 专属于 Sony。"
           },
         ]
       }

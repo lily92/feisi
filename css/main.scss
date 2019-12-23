@@ -474,7 +474,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .padding-b30{ padding-bottom: 30px}
 
 #culturelist{
-  margin-bottom: 20px;
+  margin-bottom: 20px; padding-bottom: 0;
   li{margin-bottom: 20px;}
 }
 .marginb-b50{ margin-bottom: 50px;}

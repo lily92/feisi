@@ -1047,6 +1047,7 @@ header.active a.menu {
 
 #culturelist {
   margin-bottom: 20px;
+  padding-bottom: 0;
 }
 
 #culturelist li {

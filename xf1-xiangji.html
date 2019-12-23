@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>飞思</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="active">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="ny-banner positionr ">
+    <img src="images/xf/xsf-banner.jpg" alt="" srcset="" class="w100 hidden-xs">
+    <img src="images/xf/xsf-banner.jpg" alt="" srcset="" class="w100 visible-xs">
+    <div class="positionb  colorf flex flex-center p-position-static p-color0">
+      <div class="text-center">
+        <h2 class="h2 margin-t20"><b>功能强大，轻巧便携</b></h2>
+        <p class="padding25">跟随Phase One特约大使Reuben Wu一起前往玻利维亚，探索壮丽非凡的风景，发掘XT相机系统无可比拟的便携性。</p>
+        <p><a href="" class="button-l btn-margin-auto w170">我们共同见证</a></p>
+        <p class="visible-xs"><br></p>
+      </div>
+    </div>
+  </div>
+  <!-- end banner -->
+
+  <ul class="bgf7 padding20 just-between flex" id="xflist">
+    <li class="w50d bgf xf1-li">
+      <div class="positionr">
+        <img src="images/xf/xfs-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb">
+          <img src="images/xf/xfs-img.jpg" alt="" srcset="" class="w100">
+        </div>
+      </div>
+      <div>
+        <p class="fon40 padding25">无与伦比的画质</p>
+        <p class="color6 lineh2">XT 相机系统的震撼画质必定会为他人留下深刻的印象和启迪。Phase One 为中画幅画质
+          树立了标杆，定能让您的摄影作品脱颖而出。</p>
+      </div>
+    </li>
+  </ul>
+  <script id="xfs_tpl" type="text/html">
+    {{#  layui.each(d.list, function(index, item){ }}
+    <li class="w50d bgf xf1-li">
+      <div class="positionr">
+        <img src="images/xf/xfs-img-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb">
+          <img src="{{item.img}}" alt="" srcset="" class="w100">
+        </div>
+      </div>
+      <div>
+        <p class="fon40 padding25">{{item.title}}</p>
+        <p class="color6 lineh2">{{item.desc}}</p>
+      </div>
+    </li>
+      {{#  }); }}
+   </script>
+  <script>
+    layui.use('laytpl', function () {
+      var laytpl = layui.laytpl;
+      var xflist = {
+        //品牌新闻数据
+        "list": [
+          {
+            "id": "02",
+            "title": "无与伦比的画质",
+            "desc": "XT 相机系统的震撼画质必定会为他人留下深刻的印象和启迪。Phase One 为中画幅画质树立了标杆，定能让您的摄影作品脱颖而出。",
+            "img": "images/xf/xfs-img.jpg"
+          }, {
+            "id": "02",
+            "title": "无与伦比的画质",
+            "desc": "XT 相机系统的震撼画质必定会为他人留下深刻的印象和启迪。Phase One 为中画幅画质树立了标杆，定能让您的摄影作品脱颖而出。",
+            "img": "images/xf/xfs-img.jpg"
+          }, {
+            "id": "02",
+            "title": "无与伦比的画质",
+            "desc": "XT 相机系统的震撼画质必定会为他人留下深刻的印象和启迪。Phase One 为中画幅画质树立了标杆，定能让您的摄影作品脱颖而出。",
+            "img": "images/xf/xfs-img.jpg"
+          }, {
+            "id": "02",
+            "title": "无与伦比的画质",
+            "desc": "XT 相机系统的震撼画质必定会为他人留下深刻的印象和启迪。Phase One 为中画幅画质树立了标杆，定能让您的摄影作品脱颖而出。",
+            "img": "images/xf/xfs-img.jpg"
+          },
+        ]
+      }
+      var xfs_tpls = xfs_tpl.innerHTML;
+      var view = document.getElementById('xflist');
+      laytpl(xfs_tpls).render(xflist, function (html) {
+        view.innerHTML = html;
+      });
+
+    })
+  </script>
+
+
+  <!--banner  -->
+  <div class="xf-banner2 positionr">
+    <img src="images/xf/xfs-banner2.jpg" alt="" srcset="" class="w100">
+    <div class="positionb  flex flex-al-center colorf p-text-center ">
+      <div class="max1200">
+        <p class="fon34">可用性优先——换取愉悦的拍摄体验</p>
+        <p class="padding25">
+          了解更多有关XT相机系统的技术与集成内容
+        </p>
+        <p><a href="" class="button-l w160 p-margin-auto">了解更多</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- end banner  -->
+
+  <!-- list2 -->
+  <div class="bgf7 padding20 ">
+    <div class="flex just-between margin-pc-b20">
+      <div class="w50d positionr margin-b20">
+        <img src="images/xf/xfs-item1-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb">
+          <img src="images/xf/xfs-item1.jpg" alt="" srcset="" class="w100">
+        </div>
+        <div class="icond0"></div>
+      </div>
+      <div class="w50d flex flex-al-center">
+        <div class="max570">
+          <p class="fon38">支持的IQ数码后背</p>
+          <p class="lineh2 padding25 color6">XT 相机系统秉承不断扩展和发展的设计理念。凭借以 IQ4 Infinity 平台为大脑、以 X-Shutter 为核心的集成和功能特性，XT
+            在便捷操作方面具备了无限的潜能。XT 是一款非常出色的相机系统，其特性和功能必将与时俱进，历久弥新。</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex just-between flex-reverse margin-pc-b20">
+      <div class="w50d positionr margin-b20">
+        <img src="images/xf/xfs-item1-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb">
+          <img src="images/xf/xfs-img2.jpg" alt="" srcset="" class="w100">
+        </div>
+        <div class="icond1"></div>
+      </div>
+      <div class="w50d flex flex-al-center">
+        <div class="max570">
+          <p class="fon38">模块化设计，灵活扩展</p>
+          <p class="lineh2 padding25 color6">所有Phase One 相机系统都采用模块化设计，注重灵活性。XT 相机系统可与IQ4数码后背完美搭配，共同打造轻松便携的解决方案，您也可以切换为 XF 相机以实现更多元的自动化流程、高度丰富的自定功能和工具，打造动态化工作流。</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-- end list -->
+
+
+
+  <!--star  index-item5  申请演示-->
+  <div class="index-item5 bgf text-center">
+    <h2 class="fon44 h2  wow fadeInUp">预约个人试用</h2>
+    <div class="padding25 color6  fon16  wow fadeInUp">
+      向 Phase One 当地合作伙伴申请 XT 相机系统个人试用。
+    </div>
+    <div class="padding hidden-xs">
+      <br><br>
+    </div>
+    <div>
+      <p class=" wow fadeInUp"><a href="" class="button-l item5-btn">申请</a></p>
+    </div>
+  </div>
+  <!--end  index-item5 申请演示 -->
+
+  <!--star  footer -->
+  <footer>
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+
+  <script src="js/wow.min.js"></script>
+  <script src="layui/layui.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>飞思</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="active">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="ny-banner  w100 bgfa ">
+    <div class=" padding190  flex just-between max1200">
+      <div class="w52 flex flex-al-center">
+        <div   class="p-text-center w100">
+          <p class="fon36">叶片快门镜头系列</p>
+          <p  class="fon18 color6 padding15">专业高分辨率镜头<br>
+            囊括适合所有摄影类型的镜头种类</p>
+            <p  class="padding25"><a href="" class="button-l w160 p-margin-auto margin-b20">了解更多</a></p>
+        </div>
+      </div>
+      <div class="w48">
+        <img src="images/xf/pro-banner.png" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+  <!-- end banner -->
+  <div class="bgf7 padding50">
+    <ul class=" just-between flex max1200 " id="xflist">
+      <li class="w30 bgf xf-li">
+        <div class="positionr">
+          <img src="images/xf/pro-imgs-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+          <div class="positionb">
+            <img src="images/xf/pro-imgs.jpg" alt="" srcset="" class="w100">
+          </div>
+        </div>
+        <div class="text-center">
+          <p class=" ">chneider Kreuznach</p>
+          <p class="color6">35mm LS f/3.5</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script id="xfs_tpl" type="text/html">
+    {{#  layui.each(d.list, function(index, item){ }}
+    <li class="w30 bgf xf-li">
+      <div class="positionr">
+        <img src="images/xf/pro-imgs-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb">
+          <img src="{{item.img}}" alt="" srcset="" class="w100">
+        </div>
+      </div>
+      <div class="text-center">
+        <p class=" ">{{item.title}}</p>
+        <p class="color6">{{item.desc}}</p>
+      </div>
+    </li>
+      {{#  }); }}
+   </script>
+  <script>
+    layui.use('laytpl', function () {
+      var laytpl = layui.laytpl;
+      var xflist = {
+        //品牌新闻数据
+        "list": [
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/pro-imgs.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },{
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/pro-imgs.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },
+          {
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/xfs-img.jpg"
+          },{
+            "id": "02",
+            "title": "Schneider Kreuznach",
+            "desc": "35mm LS f/3.5",
+            "img": "images/xf/pro-imgs.jpg"
+          }
+        ]
+      }
+      var xfs_tpls = xfs_tpl.innerHTML;
+      var view = document.getElementById('xflist');
+      laytpl(xfs_tpls).render(xflist, function (html) {
+        view.innerHTML = html;
+      });
+
+    })
+  </script>
+
+
+  <!--star  footer -->
+  <footer class="noshow-about">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

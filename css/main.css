@@ -1294,6 +1294,124 @@ header.active a.menu {
   cursor: pointer;
 }
 
+.btn-w155 {
+  display: inline-block;
+  margin: 25px auto 0;
+  padding: 0 20px;
+}
+
+.flex-al-between {
+  align-content: space-between;
+}
+
+.padd12 {
+  padding: 0 12%;
+}
+
+.tx-tab {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tx-tab a {
+  margin-right: 40px;
+  display: block;
+  transition: .3s linear all;
+  margin-bottom: 15px;
+}
+
+.tx-tab a:hover {
+  font-weight: bold;
+  color: #00a0e9;
+}
+
+.xflist {
+  margin-left: -1.5%;
+  margin-right: -1.5%;
+}
+
+.xflist li {
+  width: 30.33%;
+  margin: 0 1.5%;
+}
+
+.btn-margin-auto {
+  margin: 0 auto;
+}
+
+.w170 {
+  width: 170px;
+}
+
+.xf1-li {
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.w160 {
+  width: 160px;
+}
+
+.max570 {
+  max-width: 570px;
+  padding-left: 5%;
+}
+
+.fon38 {
+  font-size: 38px;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.margin-pc-b20 {
+  margin-bottom: 20px;
+}
+
+.icond0 {
+  width: 0;
+  height: 0;
+  border: 50px solid #f7f7f7;
+  border-color: transparent #f7f7f7 transparent transparent;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icond1 {
+  width: 0;
+  height: 0;
+  border: 50px solid #f7f7f7;
+  border-color: transparent transparent transparent #f7f7f7;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.xf-li {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.bgfa {
+  background: #f0f0f0;
+}
+
+.padding190 {
+  padding: 190px 0;
+}
+
+.w52 {
+  width: 52%;
+}
+
+.w48 {
+  width: 48%;
+}
+
 @media (max-width: 1200px) {
   .fon32 {
     font-size: 28px;

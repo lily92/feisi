@@ -25,29 +25,82 @@
   </header>
   <!--end  header -->
 
+  <!--star banner -->
+  <div class="ny-banner positionr ">
+    <img src="images/meiti-banner.jpg" alt="" srcset="" class="w100 hidden-xs  wow fadeIn w100" >
+    <img src="images/pocs-banner.jpg" alt="" srcset="" class="w100 visible-xs  wow fadeIn w100">
+    <div class="positionb flex flex-center ">
+      <h2 class="h2 colorf  wow fadeInUp0">媒体资料库</h2>
+    </div>
+  </div>
+  <!-- end banner -->
 
-  <!--star  媒体资料库  -->
-  <div class="ziliaoku max1200    ">
-    <div class="padding100 flex just-between">
-      <div class="ziliaoku-left">
-        <img src="images/ziliao-img.jpg" alt="" srcset="" class="w100">
+  <!--star  中国活动  -->
+  <div class="zghd">
+    <div class="max1200 padding50">
+      <div class="flex padding-t50 fon16  goumai-title">
+        <a href="" class="cur">图片</a>
+        <a href="">视频</a>
+        <a href="">文件</a>
       </div>
-      <div class="ziliaoku-right flex flex-al-center">
-        <div>
-          <h2 class="h2">
-            支援资料库
-          </h2>
-          <div class="color6 padding50">
-            获取有关相机系统，软件，用户配置文件或订单的帮助。<br>
-在创建技术支持案例之前，请查看我们的知识库和文档部分。 我们的技术支持团队支持Phase One和Mamiya Leaf的产品。<br>
-我们的技术支持团队每个工作日每天24小时提供服务。<br>
-它需要一个在线帐户来创建技术支持案例。<br>
+      
+      <ul class="hd_list flex margin-t25" id="hd_list">
+
+      </ul>
+      <script id="news_tpl" type="text/html">
+        {{#  layui.each(d.list, function(index, item){ }}
+        <li class="w30 wow fadeInUp0">
+          <div class="hd-img positionr">
+            <img src="images/zl-img-bg.jpg" alt="" srcset="" class="w100">
+            <div class="positionb">
+              <a href="zhongguo-huod-detail.html"><img src="{{item.img}}" alt="" srcset="" class="w100"></a>
+            </div>
+            <div class="down-icon"></div>
           </div>
-        </div>
+          <a href="zhongguo-huod-detail.html" class="hd-con fonar lineh2 ">
+            <p><b>{{item.title}}</b></p>
+            <p class=" line2 color6">{{item.desc}}</p>
+            <p  class='color6'>{{item.date}}</p>
+          </a>
+        </li>
+          {{#  }); }}
+       </script>
+      <script>
+        layui.use('laytpl', function () {
+          var laytpl = layui.laytpl;
+          var hd_list = {
+            //品牌新闻数据
+            "list": [
+              {
+                "id": "02",
+                "title": "TS图像与Reuben Wu 2d",
+                "desc": "大小：2.9 MB•3000 x 1839像素",
+                "img": "images/zl-img.jpg",
+                "url":''
+              }
+
+            ]
+          }
+          var news_tpls = news_tpl.innerHTML;
+          var view = document.getElementById('hd_list');
+          laytpl(news_tpls).render(hd_list, function (html) {
+            view.innerHTML = html;
+          });
+
+        })
+      </script>
+      <div class="page text-center  w100  padding25">
+        <a href="" class="page-prev-next">上一页</a>
+        <a href="">1</a>
+        <a href="">2</a>
+
+        <a href="">……</a>
+        <a href="">8</a>
+        <a href="" class="page-prev-next">下一页</a>
       </div>
     </div>
   </div>
-  <!-- end 媒体资料库 -->
+  <!-- end 中国活动 -->
 
 
   <!--star  footer -->

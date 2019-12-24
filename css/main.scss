@@ -412,10 +412,11 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 
 .goumai-title{
   border-bottom: 1px solid #ccc; padding-bottom: 25px;
-  a{margin-right: 60px; white-space: nowrap;}
+  a{margin-right: 60px; white-space: nowrap; transition: .3s linear all; }
+  a:hover,a.cur{ color: $colorb; font-weight: bold;}
 }
 .goumai-title-sub{
-  a{margin: 0 15px;}
+  a{margin: 0 15px; transition: .3s linear all;}
   a:hover,a.cur{ color: $colorb;}
 }
 .padding-p10{
@@ -449,8 +450,8 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
   .al-top{ vertical-align: text-top;}
 }
 .hd_list{
-  margin-left: -1%; margin-right: -1%;
-  li{ margin: 0 1% 50px;}
+  margin-left: -1.5%; margin-right: -1.5%;
+  li{ margin: 0 1.5% 50px;}
 }
 .page{
   a{ padding: 0 5px; margin:  0 10px;}
@@ -571,6 +572,10 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .layui-form-checked,.layui-form-checked:hover {
   border-color:$colorb
 }
+.hd-tab{ border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 30px;
+  a{ margin-right: 40px;}
+}  
+.down-icon{ width: 35px;}
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}
   .fon18{  font-size: 16px;}

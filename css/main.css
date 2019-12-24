@@ -712,17 +712,13 @@ header.active a.menu {
 }
 
 .question-list .box {
-  padding: 40px 20px 60px;
+  padding: 20px 20px 20px;
   margin-bottom: 20px;
 }
 
 .question-list .h3 {
   line-height: 1;
-  padding: 20px 0;
-}
-
-.question-list .list {
-  min-height: 70px;
+  padding: 0 0 10px 0;
 }
 
 .colorb {
@@ -1293,6 +1289,8 @@ header.active a.menu {
 
 .play-icon {
   cursor: pointer;
+  width: 48px;
+  height: 45px;
 }
 
 .btn-w155 {
@@ -1411,6 +1409,10 @@ header.active a.menu {
 
 .w48 {
   width: 48%;
+}
+
+.marginb-0 {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1200px) {

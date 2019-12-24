@@ -375,9 +375,9 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .w50d{width: calc(50% - 10px);}
 .fon40{ font-size: 40px;}
 .question-list{
-  .box{padding: 40px 20px 60px; margin-bottom: 20px;}
-  .h3{ line-height: 1; padding: 20px 0;}
-  .list{ min-height: 70px;}
+  .box{padding: 20px 20px 20px; margin-bottom: 20px;}
+  .h3{ line-height: 1; padding: 0 0 10px 0;}
+  
 }
 .colorb{ color: $colorb !important;}
 .list-b p { padding: 5px 0;}
@@ -533,7 +533,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .paddinga25{ padding: 25px;}
 .flex-item-end{ align-items: flex-end;}
 .margin15{margin: 15px 0;}
-.play-icon{ cursor: pointer;}
+.play-icon{ cursor: pointer; width: 48px; height: 45px;}
 .btn-w155 { display: inline-block; margin: 25px auto 0; padding: 0 20px;}
 .flex-al-between{ align-content: space-between;}
 .padd12{ padding: 0 12%;}
@@ -561,6 +561,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .padding190{ padding: 190px 0;}
 .w52{ width: 52%; }
 .w48{ width: 48%;}
+.marginb-0{ margin-bottom: 0;}
 
 
 @media (max-width: 1200px) {

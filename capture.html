@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
-
   <script src="js/wow.min.js"></script>
   <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -27,13 +26,13 @@
 
   <!--star banner -->
   <div class="ny-banner positionr">
-    <img src="images/capture/cap-banner.jpg" alt="" srcset="" class="w100 hidden-xs">
-    <img src="images/capture/cap-banner.jpg" alt="" srcset="" class="w100 visible-xs">
+    <img src="images/capture/cap-banner.jpg" alt="" srcset="" class="w100 hidden-xs wow fadeIn">
+    <img src="images/p-banner.jpg" alt="" srcset="" class="w100 visible-xs wow fadeIn">
     <div class="positionb flex flex-center">
       <div class="text-center colorf">
-        <p class="fon16 ">你对摄影的追求无比执着。</p>
-        <h2 class="padding25 h2"><b>又何必对软件工具有所妥协？</b></h2>
-        <p><a href="" class="button-l btn-now">立即试用</a></p>
+        <p class="fon16 wow fadeInUp0 " data-wow-delay=".2s">你对摄影的追求无比执着。</p>
+        <h2 class="padding25 h2 wow fadeInUp0" data-wow-delay=".4s"><b>又何必对软件工具有所妥协？</b></h2>
+        <p class="wow fadeInUp0" data-wow-delay=".6s"><a href="" class="button-l btn-now">立即试用</a></p>
       </div>
     </div>
   </div>
@@ -43,9 +42,9 @@
   <!--star  capture  -->
   <div class="capture ">
     <div class=" padding50 max1200 text-center">
-      <h2 class="h2 ">为获得难忘的照片而打造。为您量身打造。 </h2>
+      <h2 class="h2 wow fadeInUp0">为获得难忘的照片而打造。为您量身打造。 </h2>
 
-      <div class="lineh2 color6  padding-t50  ">
+      <div class="lineh2 color6  padding-t50 wow fadeInUp0 ">
         借助合适的工具，您可以无所不能。<br>
         Capture One 是为每位摄影师量身打造的功能强大且直观的软件，让您的照片编辑体验比以往更流畅、更精确。<br>
         获得更多对比度控制<br>
@@ -58,7 +57,7 @@
       </div>
 
       <!--star  capture-video -->
-      <div class="capture-video">
+      <div class="capture-video wow fadeIn">
         <div class="positionr max800">
           <img src="images/capture/cap-video.jpg" alt="" srcset="">
           <div class="positionb flex flex-center ">
@@ -71,15 +70,15 @@
 
       <!--star  index-item5  申请演示-->
       <div class="index-item5 bgf text-center">
-        <h2 class="fon44 h2 ">申请演示</h2>
-        <div class="padding25 color6  fon16">
+        <h2 class="fon44 h2  wow fadeInUp0">申请演示</h2>
+        <div class="padding25 color6  fon16  wow fadeInUp0" data-wow-delay=".2s">
           我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
         </div>
         <div class="padding hidden-xs">
           <br><br>
         </div>
         <div>
-          <p><a href="" class="button-l item5-btn">去登记</a></p>
+          <p class=" wow fadeInUp0" data-wow-delay=".4s"><a href="" class="button-l item5-btn">去登记</a></p>
         </div>
       </div>
       <!--end  index-item5 申请演示 -->
@@ -109,18 +108,18 @@
   <div class="bg2b padding50">
     <div class="max1200 flex just-between">
       <div class="w45 colorf flex capture-between">
-        <div>
-          <p class="fon24">基础色彩编辑器</p>
-          <p class="fon34">精确的色彩编辑。变得简单。</p>
+        <div >
+          <p class="fon24 wow fadeInUp0">基础色彩编辑器</p>
+          <p class="fon34 wow fadeInUp0" data-wow-delay=".2s">精确的色彩编辑。变得简单。</p>
           <br>
-          <div class="lineh2 text-just">
+          <div class="lineh2 text-just wow fadeInUp0" data-wow-delay=".4s">
             借助紧凑、易于使用的新的基础色彩编辑器，可以更快地编辑色彩。单击照片上的任意位置并拖动，以调整任何色彩的色相、饱和度和亮度-
             或使用直观的滑块进行编辑。要获得更多控制，高级色彩编辑器和肤色工具一如既往地强大。大工具，您可以完全掌控图像和工作流程。
           </div>
         </div>
-        <p><a href="" class="underline fon16  colorf"><b>立即试用</b></a></p>
+        <p  class="wow fadeInUp0" data-wow-delay=".6s"><a href="" class="underline fon16  colorf"><b>立即试用</b></a></p>
       </div>
-      <div class="w41">
+      <div class="w41 wow fadeIn">
         <img src="images/capture/cap-img3.jpg" alt="" srcset="" class="w100">
       </div>
     </div>
@@ -135,16 +134,16 @@
         {{#  layui.each(d.list, function(index, item){ }}
         <li>
           <div class='fon24'>
-            <p>{{item.title1}}</p>
-            <p>{{item.title2}}</p>
+            <p class='wow fadeInUp0'>{{item.title1}}</p>
+            <p class='wow fadeInUp0' data-wow-delay='.2s'>{{item.title2}}</p>
            </div>
-           <div class="captrue-img positionr margin-t20">
+           <div class="captrue-img positionr margin-t20 wow fadeIn" data-wow-delay='.4s'>
              <img src="images/capture/cap-list-img-bg.jpg" alt="" srcset="" class="w100">
              <div class="positionb">
               <img src="{{item.img}}" alt="" srcset="" class="w100">
             </div>
            </div>
-           <div class="lineh2 line3 margin15">
+           <div class="lineh2 line3 margin15 wow " data-wow-delay='.6s'>
             {{item.desc}}
            </div>
         </li>
@@ -157,17 +156,17 @@
   <!-- item3 -->
   <div class="item3 max1200">
     <div class=" padding100 text-center">
-      <h2 class="h2">探索 Capture One 20</h2>
-      <div class="padding25 color6">深入了解 Capture One 最新版本并试用新功能</div>
-      <p><a href="" class="button-l   btn-down ">下载试用版</a></p>
+      <h2 class="h2 wow fadeInUp0">探索 Capture One 20</h2>
+      <div class="padding25 color6 wow fadeInUp0" data-wow-delay=".2s">深入了解 Capture One 最新版本并试用新功能</div>
+      <p class="wow fadeInUp0" data-wow-delay=".4s"><a href="" class="button-l   btn-down ">下载试用版</a></p>
     </div>
     <div class="capture-list2 flex just-between">
-      <div class="capture-list2-left positionr">
+      <div class="capture-list2-left positionr wow fadeIn">
         <img src="images/capture/cap-list2-img-bg.jpg" alt="" srcset="" class="w100">
         <div class="positionb">
           <img src="images/capture/cap-list2-img.jpg" alt="" srcset="" class="w100">
         </div>
-        <div class="capture-txt1 colorf">
+        <div class="capture-txt1 colorf wow fadeInUp0" data-wow-delay=".2s">
           <p class="fon18">Capture One Pro 20 </p>
           <p class="lineh2">斩获嘉奖的照片编辑软件。适用于任何相机品牌，包括 Canon、Nikon、Sony、Fujifilm 等。</p>
         </div>
@@ -178,14 +177,14 @@
       <script id="list2_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
         <li class="w46">
-          <div class="cap-img2 positionr">
+          <div class="cap-img2 positionr wow fadeIn">
             <!-- 图片占位符，勿读后台 -->
             <img src="images/capture/cap-list2-img2-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
               <img src="{{item.img}}" alt="" srcset="" class="w100">
             </div>
           </div>
-          <div class="cap-list2-con lineh2">
+          <div class="cap-list2-con lineh2 wow fadeInUp0" data-wow-delay=".2s">
             <p class="fon18 margin-t20">{{item.title}}</p>
             <p  class="color6">
               {{item.desc}}</p>
@@ -200,8 +199,8 @@
 
   <!-- item4 -->
   <div class="item4 max1200 positionr">
-    <img src="images/capture/cap-img4.jpg" alt="" srcset="" class="w100">
-    <div class="positionb flex flex-item-end p-position-static">
+    <img src="images/capture/cap-img4.jpg" alt="" srcset="" class="w100 wow fadeIn">
+    <div class="positionb flex flex-item-end p-position-static wow fadeInUp0" data-wow-delay=".2s">
       <div class="paddinga25 colorf">
         <p class="fon18">Capture One Styles
         </p>
@@ -221,15 +220,15 @@
 
   <!--star  index-item5  申请演示-->
   <div class="index-item5 bgf text-center">
-    <h2 class="fon44 h2  wow fadeInUp">申请演示</h2>
-    <div class="padding25 color6  fon16  wow fadeInUp">
+    <h2 class="fon44 h2  wow fadeInUp0">申请演示</h2>
+    <div class="padding25 color6  fon16  wow fadeInUp0" data-wow-delay=".2s">
       我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
     </div>
     <div class="padding hidden-xs">
       <br><br>
     </div>
     <div>
-      <p class=" wow fadeInUp"><a href="" class="button-l item5-btn">去登记</a></p>
+      <p class=" wow fadeInUp0" data-wow-delay=".4s"><a href="" class="button-l item5-btn">去登记</a></p>
     </div>
   </div>
   <!--end  index-item5 申请演示 -->

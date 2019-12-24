@@ -27,16 +27,16 @@
 
   <!--star banner -->
   <div class="ny-banner">
-    <img src="images/culture-banner.jpg" alt="" srcset="" class="w100">
+    <img src="images/culture-banner.jpg" alt="" srcset="" class="w100 hidden-xs wow fadeIn">
+    <img src="images/p-banner.jpg" alt="" srcset="" class="w100 visible-xs wow fadeIn">
   </div>
   <!-- end banner -->
 
   <!--star  about  -->
   <div class="about-con ">
     <div class="max1200">
-      <h2 class="h2 color0 text-center about-title">为什么要通过 Phase One 将文化遗产系列数字化？</h2>
-
-      <div class="text-center color6 fon14">
+      <h2 class="h2 color0 text-center about-title wow fadeInUp0">为什么要通过 Phase One 将文化遗产系列数字化？</h2>
+      <div class="text-center color6 fon14 wow fadeInUp0" data-wow-delay=".2s">
         <p class="lineh2">文化遗产成像的根源在于保留过去，造福未来的理念。博物馆和图书馆对历史馆藏数字化的需求正在迅速增长，越来越多地关注未来公众信息获取，公众信息研究和保护。通常都是与时间赛跑，快速拍摄的解决方案不仅是必要的，而且往往是至关重要的。  </p>
       </div>
       <p><br><br></p>
@@ -45,7 +45,7 @@
       </ul>
       <script id="cultures_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
-        <li class="w50d  padding20 bgf">
+        <li class="w50d  padding20 bgf fadeIn wow" >
           <div class="c-img positionr ">
             <img src="images/culture-img-bg.jpg" alt="" srcset="" class="w100">
             <div class="positionb">
@@ -53,8 +53,8 @@
             </div>
           </div>
           <div class='bgf'>
-            <p class="fon40">{{item.title}}</p>
-            <p  class="lineh2 ">{{item.desc}}</p>
+            <p class="fon40 nowarp wow fadeInUp0" data-wow-delay='0.2s'>{{item.title}}</p>
+            <p  class="lineh2 wow fadeInUp0" data-wow-delay='0.4s'>{{item.desc}}</p>
           </div>
         </li>
           {{#  }); }}

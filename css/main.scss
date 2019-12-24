@@ -562,15 +562,22 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .w52{ width: 52%; }
 .w48{ width: 48%;}
 .marginb-0{ margin-bottom: 0;}
-
-
+.h35{ height: 35px;}
+.padding-left30{ padding-left: 30px}
+.layui-form-checkbox[lay-skin=primary] span{ color: #000 !important}
+.layui-form-radio>i:hover, .layui-form-radioed>i{ color: $colorb !important}
+.layui-form-checked[lay-skin=primary] i,.layui-form-checked[lay-skin=primary] i:hover{  border-color: $colorb !important; background-color: $colorb !important}
+.layui-form-checkbox[lay-skin=primary] i:hover{ border-color: $colorb !important}
+.layui-form-checked,.layui-form-checked:hover {
+  border-color:$colorb
+}
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}
   .fon18{  font-size: 16px;}
   .fon30{ font-size: 24px;}
 }
 @media (max-width: 1024px) {
-
+  .fon40{ font-size: 25px}
 }
 @media (min-width: 768px) {
 }

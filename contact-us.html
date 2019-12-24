@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
-
   <script src="js/wow.min.js"></script>
   <script src="layui/layui.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -30,7 +30,7 @@
     <div class="max1200">
       <div class="padding100">
         <h2 class="h2 text-center padding-t50 p-padding-t60">联系我们</h2>
-        <form action="">
+        <form action="" class="layui-form">
           <div class="flex just-between padding-t50">
             <div class="w30 box-line p-marginb20">
               <h3 class="fon16 color0">请填写您的信息</h3>
@@ -47,17 +47,20 @@
             <div class="w65 box-line">
               <h3 class="fon16 color0">问题类型</h3>
               <div class="margin-t25">
-                <p class="check active">相机系统问题</p>
-                <div class="radio flex ">
-                  <span class="flex"> <input type="radio" name="type" id="radio1"><label for="radio1">机身</label></span>
-                  <span class="flex"> <input type="radio" name="type" id="radio2"><label for="radio2">后背</label></span>
-                  <span class="flex"> <input type="radio" name="type" id="radio3"><label for="radio3">镜头</label></span>
-
+                <p class="">
+                  <input type="checkbox" title="相机系统问题" lay-skin="primary" class="color0" />
+                </p>
+                <div class=" padding-left30">
+                  <input type="radio" name="xt" title="机身" lay-skin="primary">
+                  <input type="radio" name="xt" title="后背" lay-skin="primary">
+                  <input type="radio" name="xt" title="镜头" lay-skin="primary">
+                  <input class="contact-txt w160 h35 hidden" type="text" placeholder="请输入产品型号" id="xinghao_txt">
                 </div>
-                <div class="margin-t25 flex just-between">
-                  <p class="check  ">Capture One软件问题</p>
-                  <p class="check ">投诉/建议</p>
-                  <p class="check ">其他问题</p>
+                <div class="margin-t25">
+                  <input type="checkbox" name="xt[ca]" title="Capture One软件问题" lay-skin="primary">
+                  <input type="checkbox" name="xt[ca1]" title="投诉/建议" lay-skin="primary">
+                  <input type="checkbox" name="xt[ca2]" title="镜头" lay-skin="primary">
+                  <input type="checkbox" title="其他问题" lay-skin="primary">
                 </div>
                 <div class="margin-t25">
                   <textarea class="textarea" placeholder="请输入……"></textarea>
@@ -67,10 +70,22 @@
             </div>
           </div>
           <p>
-            <button class="button-l btn-submit">提交</button>
+            <button class="button-l btn-submit" lay-filter="submitBtn">提交</button>
           </p>
 
         </form>
+        <script>
+          //Demo
+          layui.use('form', function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(submitBtn)', function (data) {
+              layer.msg(JSON.stringify(data.field));
+              return false;
+            });
+          });
+        </script>
       </div>
       <div class="padding-t50">
         <h2 class="h2 text-center">联络地址及电话</h2>

@@ -63,9 +63,9 @@
 
     </div>
 
-    <!-- <div class="swiper-pagination-banner swiper-pagination"></div> -->
-    <div class="swiper-button-next swiper-button-white"></div>
-    <div class="swiper-button-prev swiper-button-white"></div>
+    <div class="swiper-pagination-banner swiper-pagination visible-xs"></div>
+    <div class="swiper-button-next swiper-button-white  hidden-xs"></div>
+    <div class="swiper-button-prev swiper-button-white hidden-xs"></div>
     <span class="index-down-icon"></span>
     <script>
       $(function () {
@@ -76,7 +76,7 @@
           loop: true,
           effect: 'fade',
           pagination: {
-            // el: '.swiper-pagination-banner',
+            el: '.swiper-pagination-banner',
             // type: 'fraction',
             clickable: true
           },

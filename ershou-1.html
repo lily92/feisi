@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
@@ -28,7 +29,7 @@
   <div class="ny-banner positionr">
     <img src="images/ershou-banner.jpg" alt="" srcset="" class="w100 hidden-xs">
     <img src="images/ershou-banner.jpg" alt="" srcset="" class="w100 visible-xs">
-    <div class="positionb  ershou-banner ">
+    <div class="positionb  ershou-banner   hidden-xs">
       <div class="banner-txt colorf fon18 h100 flex">
         <div class=" ">
           <p>Kamil Tamiola</p>
@@ -80,24 +81,24 @@
       <h2 class="h2">获取 Phase One 认证二手器材解决方案简介</h2>
       <p class="color6 padding25">在下方注册，当地 Phase One 合作伙伴即会与您联系，安排个人演示并找到适合您需求和预算的解决方案。</p>
       <div class="max940">
-        <form action="" class="flex w100 just-between ">
+        <form action="" class="flex w100 just-between  layui-form">
           <div class="w47">
-            <input type="text" placeholder="姓名*" class="ershou-txt">
+            <input type="text" placeholder="姓名*" class="ershou-txt layui-input" lay-verify="required|username" >
           </div>
           <div class="w47">
-            <input type="text" placeholder="电话*" class="ershou-txt">
+            <input type="text" placeholder="电话*" class="ershou-txt layui-input" lay-verify="required|phone" >
           </div>
           <div class="w47">
-            <input type="text" placeholder="电子邮箱*" class="ershou-txt">
+            <input type="text" placeholder="电子邮箱*" class="ershou-txt layui-input" lay-verify="required|email" >
           </div>
           <div class="w47">
-            <input type="text" placeholder="验证邮箱*" class="ershou-txt">
+            <input type="text" placeholder="验证邮箱*" class="ershou-txt layui-input" lay-verify="required|email" >
           </div>
           <div class="w47">
-            <input type="text" placeholder="城市" class="ershou-txt">
+            <input type="text" placeholder="城市" class="ershou-txt layui-input">
           </div>
           <div class="w47">
-            <input type="text" placeholder="选择您所在的地区*" class="ershou-txt">
+            <input type="text" placeholder="选择您所在的地区*" class="ershou-txt layui-input" lay-verify="required" >
           </div>
           <div class="w100">
             <div class="flex " style="flex-wrap: nowrap;">
@@ -113,9 +114,21 @@
 
           </div>
           <div class="w100">
-            <button class="button-l btn-ershou marginb-0">提交</button>
+            <button class="button-l btn-ershou marginb-0" lay-submit lay-filter="submitBtn">提交</button>
           </div>
         </form>
+        <script>
+          //Demo
+          layui.use('form', function () {
+            var form = layui.form;
+            //监听提交
+            form.on('submit(submitBtn)', function (data) {
+              console.log('aa')
+              layer.msg(JSON.stringify(data.field));
+              return false;
+            });
+          });
+        </script>
       </div>
 
     </div>

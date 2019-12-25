@@ -35,21 +35,25 @@
             <div class="w30 box-line p-marginb20">
               <h3 class="fon16 color0">请填写您的信息</h3>
               <p class="margin-t25">
-                <input type="text" placeholder="请填写您的信息" class="contact-txt fon14 layui-input" lay-verify="required" required>
+                <input type="text" placeholder="请填写您的信息" class="contact-txt fon14 layui-input" lay-verify="required"
+                  required>
               </p>
               <p class="margin-t25">
-                <input type="text" placeholder="请输入电话号码" class="contact-txt fon14 layui-input" lay-verify="required|phone" required>
+                <input type="text" placeholder="请输入电话号码" class="contact-txt fon14 layui-input"
+                  lay-verify="required|phone" required>
               </p>
               <p class="margin-t25">
-                <input type="text" placeholder="请填写您的电子邮箱" class="contact-txt fon14 layui-input" lay-verify="required|email" required>
+                <input type="text" placeholder="请填写您的电子邮箱" class="contact-txt fon14 layui-input"
+                  lay-verify="required|email" required>
               </p>
-              
+
             </div>
             <div class="w65 box-line">
               <h3 class="fon16 color0">问题类型</h3>
               <div class="margin-t25">
                 <p class="">
-                  <input type="checkbox" title="相机系统问题" lay-skin="primary" class="color0 layui-bg-blue" />
+                  <input type="checkbox" title="相机系统问题" lay-skin="primary" class="color0 layui-bg-blue"
+                    lay-filter="xitong" />
                 </p>
                 <div class=" padding-left30">
                   <input type="radio" name="xt" title="机身" lay-skin="primary">
@@ -61,7 +65,7 @@
                   <input class="layui-bg-blue" type="checkbox" name="xt[ca]" title="Capture One软件问题" lay-skin="primary">
                   <input class="layui-bg-blue" type="checkbox" name="xt[ca1]" title="投诉/建议" lay-skin="primary">
                   <input class="layui-bg-blue" type="checkbox" name="xt[ca2]" title="镜头" lay-skin="primary">
-                  <input  class="layui-bg-blue" type="checkbox" title="其他问题" lay-skin="primary">
+                  <input class="layui-bg-blue" type="checkbox" title="其他问题" lay-skin="primary">
                 </div>
                 <div class="margin-t25">
                   <textarea class="textarea" placeholder="请输入……"></textarea>
@@ -79,6 +83,15 @@
           //Demo
           layui.use('form', function () {
             var form = layui.form;
+            form.on('checkbox(xitong)', function (data) {
+              console.log(data.elem.checked); //是否被选中，true或者false
+              if(data.elem.checked){
+                $('#xinghao_txt').removeClass('hidden')
+              }else{
+                $('#xinghao_txt').addClass('hidden')
+              }
+            });
+
             //监听提交
             form.on('submit(submitBtn)', function (data) {
               console.log('aa')

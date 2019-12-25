@@ -564,6 +564,10 @@ header.active a.menu { color: #666; }
 
 .layui-form-checked, .layui-form-checked:hover { border-color: #00a0e9; }
 
+.layui-form-checkbox i:hover { border: 1px solid #00a0e9 !important; }
+
+.layui-form-checkbox:hover i { border: 1px solid #00a0e9 !important; }
+
 .ny-banner { margin-top: 63px; }
 
 .hd-tab { border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 30px; }

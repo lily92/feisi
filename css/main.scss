@@ -572,6 +572,10 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .layui-form-checked,.layui-form-checked:hover {
   border-color:$colorb
 }
+.layui-form-checkbox i:hover{ border: 1px solid $colorb !important}
+.layui-form-checkbox:hover i {
+  border: 1px solid $colorb !important
+}
 .ny-banner{ margin-top:63px}
 .hd-tab{ border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; margin-bottom: 30px;
   a{ margin-right: 40px;}

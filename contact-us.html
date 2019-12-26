@@ -52,19 +52,19 @@
               <h3 class="fon16 color0">问题类型</h3>
               <div class="margin-t25">
                 <p class="">
-                  <input type="checkbox" title="相机系统问题" lay-skin="primary" class="color0 layui-bg-blue"
+                  <input type="checkbox" title="相机系统问题" lay-skin="primary" class="color0 layui-bg-blue "
                     lay-filter="xitong" />
                 </p>
-                <div class=" padding-left30">
+                <div class=" padding-left30 hidden" id="xinghao_txt" >
                   <input type="radio" name="xt" title="机身" lay-skin="primary">
                   <input type="radio" name="xt" title="后背" lay-skin="primary">
-                  <input type="radio" name="xt" title="镜头" lay-skin="primary">
-                  <input class="contact-txt w160 h35 hidden" type="text" placeholder="请输入产品型号" id="xinghao_txt">
+                  <input type="radio" name="xt" title="镜头" lay-skin="primary" lay-filter="jingtou" >
+                  <input class="contact-txt w160 h35 hidden " type="text" placeholder="请输入产品型号"  id="jiangtou_txt">
                 </div>
                 <div class="margin-t25">
                   <input class="layui-bg-blue" type="checkbox" name="xt[ca]" title="Capture One软件问题" lay-skin="primary">
                   <input class="layui-bg-blue" type="checkbox" name="xt[ca1]" title="投诉/建议" lay-skin="primary">
-                  <input class="layui-bg-blue" type="checkbox" name="xt[ca2]" title="镜头" lay-skin="primary">
+                  <input class="layui-bg-blue" type="checkbox" name="xt[ca2]" title="镜头" lay-skin="primary" >
                   <input class="layui-bg-blue" type="checkbox" title="其他问题" lay-skin="primary">
                 </div>
                 <div class="margin-t25">
@@ -92,9 +92,19 @@
               }
             });
 
+            form.on('radio(jingtou)', function (data) {
+              // console.log(data.elem.checked); //是否被选中，true或者false
+              console.log('xx')
+              if(data.elem.checked){
+                $('#jiangtou_txt').removeClass('hidden')
+              }else{
+                $('#jiangtou_txt').addClass('hidden')
+              }
+            });
+
             //监听提交
             form.on('submit(submitBtn)', function (data) {
-              console.log('aa')
+              
               layer.msg(JSON.stringify(data.field));
               return false;
             });

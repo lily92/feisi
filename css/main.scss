@@ -363,7 +363,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .icon-wb:hover{ background: url(../images/common/weibo-icon1.png);}
 .footer-icon:hover{ color: $colorb; cursor: pointer;}
 .footer-nav{ padding: 30px 0;}
-.index-down-icon{ position: fixed; width: 25px; height: 38px; background: url(../images/index/index-mouse.png) no-repeat center; left: 50%; bottom: 40px; transform: translateX(-50%); z-index: 10;    animation: huang 1s linear infinite;}
+.index-down-icon{ position: fixed; width: 25px; height: 38px; background: url(../images/index/index-mouse.png) no-repeat center; left: 50%; bottom: 40px; z-index: 10;    animation: huang 1s linear infinite; margin-left: -13px}
 .max830{ max-width: 830px; margin: 0 auto; padding: 20px; line-height: 2;}
 .about-title{ margin-bottom: 50px; line-height: 1.2;}
 .about-con{padding-top: 100px;}
@@ -585,6 +585,7 @@ header.active{ background:rgba($color: #fff, $alpha: 0.98);
 .box-shadow{ box-shadow: 0 0 6px rgba($color: #000, $alpha: 0.1)}
 .detail-min{ min-height: 500px;}
 .pro-banner-text{ position: absolute; top: 0; height: 100%; max-width: 600px; left:14% ; }
+.xf-img{ display: block}
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}
   .fon18{  font-size: 16px;}

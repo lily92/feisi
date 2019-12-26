@@ -257,8 +257,10 @@
         //如果大于100，则显示顶部元素，否则隐藏顶部元素
         if (scroTop > 100) {
           $('header').addClass('active')
+          $('.index-down-icon').hide();
         } else {
           $('header').removeClass('active')
+          $('.index-down-icon').show();
         }
       }
       );

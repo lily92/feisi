@@ -84,15 +84,15 @@
       <div class="w50d flex flex-al-between ">
         <div class="positionr w100 margin-b20">
           <img src="images/xf/xf-img2-bg.jpg" alt="" srcset="" class="w100 wow fadeIn">
-          <div class="positionb wow fadeIn ">
+          <div class="positionb wow fadeIn " >
             <img src="images/xf/xf-img2.jpg" alt="" srcset="" class="w100">
           </div>
-          <div class="positionb flex flex-al-center padd12  ">
+          <a class="positionb flex flex-al-center padd12  colorf " href="xf1-xiangji.html">
             <div  class="wow fadeInUp0">
               <p class="fon30 padding25">高分辨率镜头</p>
               <p class="">从我们的高分辨率Schneider Kreuznach镜头中选择。</p>
             </div>
-          </div>
+          </a>
         </div>
 
         <div class="positionr w100">
@@ -100,12 +100,12 @@
           <div class="positionb wow fadeIn">
             <img src="images/xf/xf-img3.jpg" alt="" srcset="" class="w100">
           </div>
-          <div class="positionb flex flex-al-center padd12  ">
+          <a class="positionb flex flex-al-center padd12 colorf  " href="xf1-xiangji.html">
             <div class="wow fadeInUp0">
               <p class="fon30 padding25">取景器和配件</p>
               <p class="">可选择棱镜或腰平取景器，并查找完美契合您工作流程的其他配件。</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -187,16 +187,16 @@
       <script id="xfs_tpl" type="text/html">
         {{#  layui.each(d.list, function(index, item){ }}
         <li class='wow fadeInUp0' data-wow-delay='.{{(index+1)*2}}s'>
-            <div class="xf-img positionr">
+            <a class="xf-img positionr"  href='xf1-xiangji.html'>
               <img src="images/xf/xf-hb-1-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
               <div class="positionb">
                  <img src="{{item.img}}" alt="" srcset="" class="w100">
                </div>
-            </div>
-            <div class="news-con">
+              </a>
+            <a class="news-con" href='xf1-xiangji.html'>
               <p class="date fon30 color6">{{item.title}}</p>
               <p>{{item.desc}}</p>
-            </div>
+            </a>
           </li>
           {{#  }); }}
        </script>

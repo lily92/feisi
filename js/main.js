@@ -37,6 +37,16 @@ $(function () {
   //加载footer
   $('footer').load("footer.html", "", function (response, status, request) {
     $(this).html(response);
+
+    $('#wx_icon').click(function (e) { 
+      e.preventDefault();
+      $('.wx-master').css({'display':'flex'})
+    });
+    $('.close-btn').click(function (e) { 
+      e.preventDefault();
+      $('.wx-master').css({'display':'none'})
+      
+    });
   });
 
   new WOW().init();

@@ -352,7 +352,8 @@ header.active,header:hover { background:rgba($color: #fff, $alpha: 0.98);
 .index-item5{ padding: 100px 0;}
 .fon44{ font-size: 44px;}
 .item5-btn{ width: 100px; background: $colorb; color: $colorf; margin: 0 auto;}
-.footer{ }
+.footer{ z-index: 5; }
+footer{ position: relative; z-index: 5;}
 .bgf4{background: #f4f4f4;}
 .padding100{ padding: 100px 0;}
 .max440{ margin: 0 auto;justify-content: space-between; max-width: 440px;}
@@ -506,7 +507,7 @@ header.active,header:hover { background:rgba($color: #fff, $alpha: 0.98);
   .swiper-button-prev{ left: 30px;}
   .swiper-slide-active .banner-ani{ opacity: 1; transform: translate3d(0, 0, 0);}
 }
-.video-master{ background: rgba(0, 0, 0, 0.6); position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 99; display: none;}
+.video-master,.wx-master{ background: rgba(0, 0, 0, 0.6); position: fixed; width: 100%; height: 100%; left: 0; top: 0; z-index: 99; display: none;}
 .video{ max-width: 1000px; width:90%; background:#000;animation-delay: 1.5s}
 .close-btn{ position: fixed; right: 20px; top: 20px; z-index: 100; cursor: pointer;}
 .padding-t25{ padding-top: 25px;}

@@ -36,22 +36,6 @@
         <div class="positionb  flex ">
           <div class="max1200 flex flex-al-center ">
             <div class="banner-ani">
-              <h2 class="color0 fon68">XT 相机系统</h2>
-              <p class="fon32 color3 banner-txt">超凡画质，不留遗憾</p>
-              <p><a href="" class="button-l more">了解更多</a></p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide ">
-        <!-- PC端banner  -->
-        <img src="images/index/about-banner.jpg" alt="" srcset="" class="hidden-xs w100">
-        <!-- 移动端banner -->
-        <img src="images/p-banner.jpg" alt="" srcset="" class="visible-xs w100">
-        <div class="positionb  flex ">
-          <div class="max1200 flex flex-al-center ">
-            <div class="banner-ani">
               <h2 class="color0 fon68">111XT 相机系统</h2>
               <p class="fon32 color3 banner-txt">超凡画质，不留遗憾</p>
               <p><a href="" class="button-l more">了解更多</a></p>
@@ -60,212 +44,259 @@
           </div>
         </div>
       </div>
+      <div class="swiper-slide positionr">
+        <img src="images/index/index-banner.jpg" alt="" srcset="" class="hidden-xs w100">
+        <img src="images/p-banner.jpg" alt="" srcset="" class="visible-xs w100">
+        <div class="banner-video positionb" style="width:100%">
+          <video style="width: 100%;  object-fit: fill" muted="" onended="myfun()" class="" controls src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+            poster="images/index/index-banner.jpg" id="video" />
+        </div>
 
+      </div>
+      <div class="swiper-slide">
+        <!-- PC端banner  -->
+        <img src="images/index/index-banner.jpg" alt="" srcset="" class="hidden-xs w100">
+        <!-- 移动端banner -->
+        <img src="images/p-banner.jpg" alt="" srcset="" class="visible-xs w100">
+        <div class="positionb  flex ">
+          <div class="max1200 flex flex-al-center ">
+            <div class="banner-ani">
+              <h2 class="color0 fon68">XT 相机系统</h2>
+              <p class="fon32 color3 banner-txt">超凡画质，不留遗憾</p>
+              <p><a href="" class="button-l more">了解更多</a></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination-banner swiper-pagination visible-xs"></div>
+      <div class="swiper-button-next swiper-button-white  hidden-xs"></div>
+      <div class="swiper-button-prev swiper-button-white hidden-xs"></div>
+      <span class="index-down-icon"></span>
+      <script>
+        $(function () {
+          var mySwiper = new Swiper('.banner', {
+            autoplay: true,
+            speed: 600,
+            parallax: true,
+            loop: true,
+            effect: 'fade',
+            pagination: {
+              el: '.swiper-pagination-banner',
+              // type: 'fraction',
+              clickable: true
+            },
+            on: {
+              transitionEnd: function () {
+                console.log('过渡结束');
+                if ($(".swiper-slide-active").children().hasClass('banner-video')) {
+                  $('.swiper-slide-active video')[0].play();
+                  mySwiper.autoplay.stop()//停止轮播图轮播
+                  mySwiper.params.autoplay = 1000; //轮播图轮播时秒数
+                }
+              },
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          });
+
+
+          // $(".swiper-slide-active video").on('play', function() {
+          //     mySwiper.autoplay.stop()//停止轮播图轮播
+          // })
+          // $('.swiper-slide-active video')[0].play(); //视频开始播放
+
+
+          function myfun() {
+            mySwiper.autoplay.star(); //轮播图开始自动播放
+            mySwiper.params.autoplay = 3000; //轮播图自动播放时秒数为3秒
+            $('.swiper-slide video')[0].pause(); //所有背景视频停止播放
+          }
+        })
+      </script>
     </div>
+    <!-- end banner -->
 
-    <div class="swiper-pagination-banner swiper-pagination visible-xs"></div>
-    <div class="swiper-button-next swiper-button-white  hidden-xs"></div>
-    <div class="swiper-button-prev swiper-button-white hidden-xs"></div>
-    <span class="index-down-icon"></span>
+
+    <!-- index-pro1 -->
+    <div class="index-product1 flex wow fadeIn">
+      <div class="pro1-txt w50 flex flex-al-center">
+        <div class="colorf pro1-txt-padding">
+          <h2 class="h2">触手可及，超乎想象</h2>
+          <p class="fon18 padding25">查找二手Phase One相机系统或零部件</p>
+          <p><a href="ershou.html" class="fon14 pro1-more underline">去了解更多</a></p>
+        </div>
+      </div>
+      <div class="pro1-img positionr w50">
+        <img src="images/index/index-pro1-bg.jpg" alt="" srcset="" class="w100">
+        <div class="positionb">
+          <img src="images/index/index-pro.jpg" alt="" srcset="" class="w100">
+        </div>
+      </div>
+    </div>
+    <!-- end index-pro1 -->
+
+    <!--star 文化数字化遗产解决方案 -->
+    <div class="index-pro2 positionr colorf "
+      style="background: url(images/index/index-pro3-lbg.jpg) no-repeat center;background-size: cover;">
+      <!-- 占位符 -->
+      <div class=" flex flex-al-center">
+        <div class="padding-l8 p-padding20">
+          <div class="wow fadeInUp">
+            <h2 class="h2">文化</h2>
+            <br>
+            <h2 class="h2">遗产数字化解决方案 </h2>
+            <p class="padding25 fon14 ">有效满足不同项目需求的文化遗产数字化方案</p>
+            <p><a href="culture.html" class="underline colorf padding25">寻找你的方案</a></p>
+          </div>
+          <!-- video -->
+          <div class="video positionr wow fadeInUp">
+            <!-- 占位符 -->
+            <img src="images/index/index-pro2-bg.jpg" alt="" srcset="">
+            <div class="positionb">
+              <img src="images/index/index-pro-img.jpg" alt="" srcset="">
+            </div>
+            <div class="btn-video ">
+              <img src="images/index/index-player-icon.png" alt="" srcset="" class="play-icon"
+                data-url="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400">
+            </div>
+          </div>
+          <!-- end video -->
+        </div>
+      </div>
+    </div>
+    <!-- end 文化数字化遗产解决方案 -->
+
+    <!-- index-item3 -->
+    <div class="index-item3 bgf padding20 flex colorf ">
+      <div class="w50 positionr">
+        <!-- 占位符 -->
+        <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
+        <div class="positionb wow fadeIn ">
+          <img src="images/index/index-pro3-img.jpg" alt="" srcset="" class="w100">
+        </div>
+        <div class="positionb">
+          <div class="w70 wow fadeInUp" data-wow-delay="500ms">
+            <p class="fon30 item3-txt">XT 系列伴行<br>
+              Reuben Wu玻利维亚逐梦之旅</p>
+            <br><br>
+            <p><a href="reuben.html" class="fon14 underline colorf">跟随我们共同见证</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="w50 positionr">
+        <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100">
+        <div class="positionb wow fadeIn">
+          <img src="images/index/index-pro4-img.jpg" alt="" srcset="" class="w100">
+        </div>
+        <div class="positionb">
+          <div class="w70 wow fadeInUp">
+            <p class="fon30 item3-txt fonar">Capture One</p>
+            <p>完整的图像编辑软件解决方案</p>
+            <br><br>
+            <p><a href="capture.html" class="fon14 underline colorf">了解更多</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end index-item3 -->
+
+    <!--star  index-item4 -->
+    <div class="index-item4 bg0 positionr  colorf">
+      <img src="images/index/index-pro5-bg1.jpg" alt="" srcset="" class="w100">
+      <div class="positionb wow fadeIn">
+        <img src="images/index/index-pro5-bg.jpg" alt="" srcset="" class="w100">
+      </div>
+
+      <div class="positionb ">
+        <div class="max1200 flex flex-al-end h100">
+          <div class="item4-txt wow fadeInUp">
+            <p><a href="" class="fon14 underline colorf learn-more">了解更多</a></p>
+            <br>
+            <br>
+            <h2 class="h2">工业解决方案</h2>
+            <div class="padding25">
+              用于测绘、测量、检验、农业等诸多应用的解决方案及组件
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="player-icon wow fadeIn"><img src="images/index/index-player-icon.png" alt="" srcset=""
+          data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'
+          class="play-icon">
+      </div>
+    </div>
+    <!--end  index-item4 -->
+
+    <!--star  index-item5  申请演示-->
+    <div class="index-item5 bgf text-center">
+      <h2 class="fon44 h2  wow fadeInUp0">申请演示</h2>
+      <div class="padding25 color6  fon16  wow fadeInUp0" data-wow-delay=".2s">
+        我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
+      </div>
+      <div class="padding hidden-xs">
+        <br><br>
+      </div>
+      <div>
+        <p class=" wow fadeInUp0" data-wow-delay=".4s"><a href="" class="button-l item5-btn">去登记</a></p>
+      </div>
+    </div>
+    <!--end  index-item5 申请演示 -->
+
+
+    <!-- 飞思，video 播放 -->
+    <div class="video-master animated slideInRight flex flex-center">
+      <img src="images/btn-close.png" alt="" srcset="" class="close-btn">
+      <video class="animated flipInX video" controls src="" poster="images/index-about-img.jpg" id="video" />
+    </div>
     <script>
       $(function () {
-        var swiper = new Swiper('.banner', {
-          autoplay: true,
-          speed: 600,
-          parallax: true,
-          loop: true,
-          effect: 'fade',
-          pagination: {
-            el: '.swiper-pagination-banner',
-            // type: 'fraction',
-            clickable: true
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+        var video = document.getElementById('video')
+        $('.play-icon').click(function (e) {
+          e.preventDefault();
+          var url = $(this).attr('data-url');
+          $('#video').attr('src', url)
+          $('.video-master').css('display', 'flex')
+          video.play();
+
+        });
+        $('.close-btn').click(function (e) {
+          e.preventDefault();
+          $('.video-master').css('display', 'none')
+          video.pause();
+          $('#video').attr('src', '')
         });
       })
     </script>
-  </div>
-  <!-- end banner -->
-
-
-  <!-- index-pro1 -->
-  <div class="index-product1 flex wow fadeIn">
-    <div class="pro1-txt w50 flex flex-al-center">
-      <div class="colorf pro1-txt-padding">
-        <h2 class="h2">触手可及，超乎想象</h2>
-        <p class="fon18 padding25">查找二手Phase One相机系统或零部件</p>
-        <p><a href="ershou.html" class="fon14 pro1-more underline">去了解更多</a></p>
-      </div>
-    </div>
-    <div class="pro1-img positionr w50">
-      <img src="images/index/index-pro1-bg.jpg" alt="" srcset="" class="w100">
-      <div class="positionb">
-        <img src="images/index/index-pro.jpg" alt="" srcset="" class="w100">
-      </div>
-    </div>
-  </div>
-  <!-- end index-pro1 -->
-
-  <!--star 文化数字化遗产解决方案 -->
-  <div class="index-pro2 positionr colorf "
-    style="background: url(images/index/index-pro3-lbg.jpg) no-repeat center;background-size: cover;">
-    <!-- 占位符 -->
-    <div class=" flex flex-al-center">
-      <div class="padding-l8 p-padding20">
-        <div class="wow fadeInUp">
-          <h2 class="h2">文化</h2>
-          <br>
-          <h2 class="h2">遗产数字化解决方案 </h2>
-          <p class="padding25 fon14 ">有效满足不同项目需求的文化遗产数字化方案</p>
-          <p><a href="culture.html" class="underline colorf padding25">寻找你的方案</a></p>
-        </div>
-        <!-- video -->
-        <div class="video positionr wow fadeInUp">
-          <!-- 占位符 -->
-          <img src="images/index/index-pro2-bg.jpg" alt="" srcset="">
-          <div class="positionb">
-            <img src="images/index/index-pro-img.jpg" alt="" srcset="">
-          </div>
-          <div class="btn-video ">
-            <img src="images/index/index-player-icon.png" alt="" srcset="" class="play-icon" data-url="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400">
-          </div>
-        </div>
-        <!-- end video -->
-      </div>
-    </div>
-  </div>
-  <!-- end 文化数字化遗产解决方案 -->
-
-  <!-- index-item3 -->
-  <div class="index-item3 bgf padding20 flex colorf ">
-    <div class="w50 positionr">
-      <!-- 占位符 -->
-      <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-      <div class="positionb wow fadeIn ">
-        <img src="images/index/index-pro3-img.jpg" alt="" srcset="" class="w100">
-      </div>
-      <div class="positionb">
-        <div class="w70 wow fadeInUp" data-wow-delay="500ms">
-          <p class="fon30 item3-txt">XT 系列伴行<br>
-            Reuben Wu玻利维亚逐梦之旅</p>
-          <br><br>
-          <p><a href="reuben.html" class="fon14 underline colorf">跟随我们共同见证</a></p>
-        </div>
-      </div>
-    </div>
-    <div class="w50 positionr">
-      <img src="images/index/index-pro3-bg.jpg" alt="" srcset="" class="w100">
-      <div class="positionb wow fadeIn">
-        <img src="images/index/index-pro4-img.jpg" alt="" srcset="" class="w100">
-      </div>
-      <div class="positionb">
-        <div class="w70 wow fadeInUp">
-          <p class="fon30 item3-txt fonar">Capture One</p>
-          <p>完整的图像编辑软件解决方案</p>
-          <br><br>
-          <p><a href="capture.html" class="fon14 underline colorf">了解更多</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- end index-item3 -->
-
-  <!--star  index-item4 -->
-  <div class="index-item4 bg0 positionr  colorf">
-    <img src="images/index/index-pro5-bg1.jpg" alt="" srcset="" class="w100">
-    <div class="positionb wow fadeIn">
-      <img src="images/index/index-pro5-bg.jpg" alt="" srcset="" class="w100">
-    </div>
-   
-    <div class="positionb ">
-      <div class="max1200 flex flex-al-end h100">
-        <div class="item4-txt wow fadeInUp">
-          <p><a href="" class="fon14 underline colorf learn-more">了解更多</a></p>
-          <br>
-          <br>
-          <h2 class="h2">工业解决方案</h2>
-          <div class="padding25">
-            用于测绘、测量、检验、农业等诸多应用的解决方案及组件
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="player-icon wow fadeIn"><img src="images/index/index-player-icon.png" alt="" srcset="" data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'  class="play-icon">
-    </div>
-  </div>
-  <!--end  index-item4 -->
-
-  <!--star  index-item5  申请演示-->
-  <div class="index-item5 bgf text-center">
-    <h2 class="fon44 h2  wow fadeInUp0">申请演示</h2>
-    <div class="padding25 color6  fon16  wow fadeInUp0" data-wow-delay=".2s">
-      我同意，根据Phase One隐私政策（Phase One Privacy Policy），使用我在此表单中提供的信息。
-    </div>
-    <div class="padding hidden-xs">
-      <br><br>
-    </div>
-    <div>
-      <p class=" wow fadeInUp0" data-wow-delay=".4s"><a href="" class="button-l item5-btn">去登记</a></p>
-    </div>
-  </div>
-  <!--end  index-item5 申请演示 -->
-
-
-  <!-- 飞思，video 播放 -->
-  <div class="video-master animated slideInRight flex flex-center">
-    <img src="images/btn-close.png" alt="" srcset="" class="close-btn">
-    <video class="animated flipInX video" controls
-      src=""
-      poster="images/index-about-img.jpg" id="video" />
-  </div>
-  <script>
-    $(function () {
-      var video = document.getElementById('video')
-      $('.play-icon').click(function (e) {
-        e.preventDefault();
-        var url = $(this).attr('data-url');
-        $('#video').attr('src',url)
-        $('.video-master').css('display', 'flex')
-        video.play();
-
-      });
-      $('.close-btn').click(function (e) {
-        e.preventDefault();
-        $('.video-master').css('display', 'none')
-        video.pause();
-        $('#video').attr('src','')
-      });
-    })
-  </script>
 
 
 
 
-  <!--star  footer -->
-  <footer>
-  </footer>
-  <!-- end footer -->
+    <!--star  footer -->
+    <footer>
+    </footer>
+    <!-- end footer -->
 
-  <script>
-    $(function () {
-      $(window).scroll(function () {
-        //创建一个变量存储当前窗口下移的高度
-        var scroTop = $(window).scrollTop();
-        //如果大于100，则显示顶部元素，否则隐藏顶部元素
-        if (scroTop > 100) {
-          $('header').addClass('active')
-          $('.index-down-icon').hide();
-        } else {
-          $('header').removeClass('active')
-          $('.index-down-icon').show();
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          //创建一个变量存储当前窗口下移的高度
+          var scroTop = $(window).scrollTop();
+          //如果大于100，则显示顶部元素，否则隐藏顶部元素
+          if (scroTop > 100) {
+            $('header').addClass('active')
+            $('.index-down-icon').hide();
+          } else {
+            $('header').removeClass('active')
+            $('.index-down-icon').show();
+          }
         }
-      }
-      );
-    })
-  </script>
+        );
+      })
+    </script>
 
 </body>
 

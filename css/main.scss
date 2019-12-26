@@ -281,7 +281,7 @@ select,
 }
 /*header*/
 header{ position: fixed; top: 0; left: 0; width: 100% ; z-index: 4; transition: .5s linear all;}
-header.active{ background:rgba($color: #fff, $alpha: 0.98);
+header.active,header:hover { background:rgba($color: #fff, $alpha: 0.98);
   a.menu{ color: $color6;}
 
 }

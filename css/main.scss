@@ -392,6 +392,7 @@ footer{ position: relative; z-index: 5;}
 .w30{ width: 30%;}
 .w65{ width: 65%;}
 .padding-t50{ padding-top: 50px;}
+.contact{ margin-bottom: 100px}
 .contact-txt{ width: 100%; padding: 15px 10px; border-radius: 5px; border: 1px solid #d9d9d9; background: none; height: 45px;}
 .margin-t25{margin-top: 25px;}
 .contact{
@@ -587,6 +588,11 @@ footer{ position: relative; z-index: 5;}
 .detail-min{ min-height: 500px;}
 .pro-banner-text{ position: absolute; top: 0; height: 100%; max-width: 600px; left:14% ; }
 .xf-img{ display: block}
+.swiper-pagination-banner{ bottom: 20px; width: 100%; text-align: center;
+
+  .swiper-pagination-bullet{ margin: 0 5px;}
+}
+.layui-flow-more{ width: 100%; text-align: center}
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}
   .fon18{  font-size: 16px;}

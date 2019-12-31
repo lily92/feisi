@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="layui/css/layui.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
@@ -43,7 +44,7 @@
         <li class="positionb" style="display: none;"><img src="images/p-banner/b12.jpg"></li>
       </ul>
       <div class="dsyMap positionb">
-        <img src="images/p-banner/dsy_map.png" usemap="#Map_dasanyuan" >
+        <img src="images/p-banner/dsy_map.png" usemap="#Map_dasanyuan">
       </div>
       <map name="Map_dasanyuan" id="Map_dasanyuan">
         <area shape="poly"
@@ -171,18 +172,7 @@
   <!-- end banner -->
   <div class="bgf7 padding50">
     <ul class=" just-between flex max1200 " id="xflist">
-      <li class="w30 bgf xf-li">
-        <div class="positionr">
-          <img src="images/xf/pro-imgs-bg.jpg" alt="" srcset="" class="w100 visible-hidden">
-          <div class="positionb">
-            <img src="images/xf/pro-imgs.jpg" alt="" srcset="" class="w100">
-          </div>
-        </div>
-        <div class="text-center">
-          <p class=" ">chneider Kreuznach</p>
-          <p class="color6">35mm LS f/3.5</p>
-        </div>
-      </li>
+
     </ul>
   </div>
 
@@ -267,8 +257,39 @@
       laytpl(xfs_tpls).render(xflist, function (html) {
         view.innerHTML = html;
       });
-
     })
+    layui.use('flow', function () {
+      var flow = layui.flow;
+      flow.load({
+        elem: '#xflist' //指定列表容器
+        , done: function (page, next) { //到达临界点（默认滚动触发），触发下一页
+          var lis = [];
+          //以jQuery的Ajax请求为例，请求下一页数据（注意：page是从2开始返回）
+          $.ajax({
+            type: "get",
+            url: 'js/product.json?page=' + page,
+            data: "data",
+            dataType: "json",
+            beforeSend: function () {
+              console.log('正在加载……')
+            },
+            success: function (res) {
+              //假设你的列表返回在data集合中
+              layui.each(res.list, function (index, item) {
+                lis.push('<li class="w30 bgf xf-li"><div class="positionr"><img src="images/xf/pro-imgs-bg.jpg" alt="" srcset="" class="w100 visible-hidden"><div class="positionb"><img src="' + item.img + '" alt="" srcset="" class="w100"></div></div><div class="text-center"><p class=" ">' + item.title + '</p> <p class="color6">' + item.desc + '</p> </div></li>')
+              });
+
+              //执行下一页渲染，第二参数为：满足“加载更多”的条件，即后面仍有分页
+              //pages为Ajax返回的总页数，只有当前页小于总页数的情况下，才会继续出现加载更多
+              next(lis.join(''), page < res.pages);
+            }
+          });
+
+        }
+      });
+
+    });
+
   </script>
 
 

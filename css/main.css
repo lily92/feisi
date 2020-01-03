@@ -598,6 +598,16 @@ footer { position: relative; z-index: 5; }
 
 .layui-flow-more { width: 100%; text-align: center; }
 
+#xflist li { border: 1px solid #fff; }
+
+#xflist a, #xflist p a { color: #333; transition: .3s linear all; }
+
+#xflist li:hover { border: 1px solid #00a0e9; transition: .3s linear all; }
+
+#xflist li:hover .text-center a { color: #00a0e9; }
+
+#xflist li:hover p { color: #00a0e9; }
+
 @media (max-width: 1200px) { .fon32 { font-size: 28px; }
   .fon18 { font-size: 16px; }
   .fon30 { font-size: 24px; } }

@@ -593,6 +593,13 @@ footer{ position: relative; z-index: 5;}
   .swiper-pagination-bullet{ margin: 0 5px;}
 }
 .layui-flow-more{ width: 100%; text-align: center}
+#xflist {
+  li{ border: 1px solid #fff}
+  a,p a{ color: $color3; transition: .3s linear all}
+  li:hover{ border: 1px solid $colorb; transition: .3s linear all}
+  li:hover .text-center a{ color: $colorb }
+  li:hover p{ color: $colorb}
+}
 @media (max-width: 1200px) {
   .fon32{ font-size: 28px;}
   .fon18{  font-size: 16px;}
